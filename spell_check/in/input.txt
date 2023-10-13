@@ -1,0 +1,157 @@
+\documentclass[./main.tex]{subfiles}
+
+\begin{document}
+\onehalfspacing
+\section{Մետրիկա, մետրիկական տարածություններ, համարժեք մետրիկաներ}\label{sec:2}
+
+\par Դիցուք $M$-ը որևէ ոչ դատարկ բազմություն է, իսկ $\rho$-ն $M \times M$ դեկարտյան արտադրյալի վրա որոշված և իրական արժեքներ ընդունող այնպիսի ֆունկցիա է, որը բավարարում է հետևյալ պայմաններին․
+\begin{enumerate}
+    \item [$1^{\circ}$] $\rho(x,y) \geq 0$ և $\rho(x,y) = 0 \Leftrightarrow x = y \quad (\forall x, y \in M)$
+    \item [$2^{\circ}$] $\rho(x,y) = \rho(y,x)$, $\forall x, y \in M$
+    \item [$3^{\circ}$] $\rho(x,z) \leq \rho(x,y) + \rho(y,z)$, $\forall x, y, z \in M$
+\end{enumerate}
+
+% metirca
+\begin{ndefinition}
+Նշված դեպքում $\rho$-ն կոչվում է \textbf{մետրիկա}, իսկ $(M, \rho)$ զույգը՝ \textbf{մետրիկական տարածություն}։
+\end{ndefinition}
+
+\par \textbf{Մետրիկայի օրինակներ}
+\begin{enumerate}
+    \item [1)] 
+    $M = \R^n, n \geq 1$ \\ 
+    $x = (x_1, x_2, \dots x_n) \in \R^n$ \\ 
+    $y = (y_1, y_2, \dots y_n) \in \R^n$ \\ 
+    $\rho(x,y) = \sqrt{ \sum_{j=1}^{m} (x_j - y_j)^2}$
+    \item [2)] 
+    $M = \R^n$, $\rho(x,y) = \max\limits_{1 \leq i \leq n} \abs{x_i - y_i}$  \\ 
+    \red{մենակ երրորդն էր գրված, կարողա՞ էս մեկի համար լրիվ գրենք}\\
+    $3^{\circ}$ Մինկովսկու անհավաս՝ $\abs{x_i - z_i} \leq \abs{x_i - y_i} + \abs{y_i - z_i} \Rightarrow \max \abs{x_i - z_i} \leq \max \abs{x_i - y_i} + \max \abs{y_i - z_i} $
+    %%%% 4 %%%%
+    \item [3)] $M = \R^n, \quad \rho(x,y) = \sum\limits_{i=1}^{b} \abs{x_i - y_i}$
+
+    \item [4)] 
+    $M = \C^n := \C \times \C \cdots \C$ \\
+    $\Z = (z_1, z_2, \dots, z_n) \in \C^n, \quad z_j \in \C, \quad j = 1, 2, \dots, n$ \\ 
+    $U = (u_1, u_2, \dots, u_n) \in \C^n, \quad u_j \in \C, \quad j = 1, 2, \dots, n$ \\ 
+    $\rho(\Z, U) = (\sum\limits_{j=1}^{n} \abs{z_j - u_j}^2)^{\frac{1}{2}}$   (ստուգել, որ մետրիկա է)
+
+    \item [5)] 
+    $M = C[0,1]$, - $[0,1]$ հատվածի վրա անընդհատ ֆունկցիաների տարածություն \\ 
+    $f, g \in C[0,1]$ \\
+    $\rho(f, g) = \max\limits_{x \in [0,1]}{\abs{f(x)-g(x)}}$ \\ 
+    Քանի որ $f, g \in C[0,1]$, ապա համաձայն Վայերշտրասի թեորեմի՝ $\max\limits_{x \in [0,1]} {\abs{f(x)-g(x)}}$-ը գույություն ունի․ $\exists x^{\star} \in [0,1]$ $s. t.$ $\rho(f,g) = \abs{f(x^{\star} - g(x^{\star}) }$
+
+    $C[0,1]$-ում բերենք ևս մեկ մետրիկայի օրինակ․
+
+    \item [6)] $\rho(f, g) = \int\limits_{0}^{1} \abs{f(x) - g(x)} \d x$ (ստուգել որ մետրիկա է)
+    \red{to-do}
+    
+\end{enumerate}
+
+
+\par Դիցուք տրված են $(M, \rho)$ և $(M_1, \rho_1)$ մետրիկական տարածությունները։
+
+\begin{ndefinition} % sahm 2, hamarjeq metrica
+$\widetilde{M}$-ով նշանակենք $M \cap M_1$ ոչ դատարկ բազմությունը։ Այդ դեպքում $\rho$ և $\rho_1$ մետրիկաները կոչվում են \textbf{համարժեք} $\widetilde{M}$-ի վրա, եթե $\exists \alpha, \beta > 0 s. t. \\ \alpha \rho_1(x,y) \leq \rho(x,y) \leq \beta \rho_1(x,y)$, $\forall (x,y) \in (\widetilde{M} \times \widetilde{M})$ \red{durs chi galis "ayd depqum" ov sharaheusutuny} \red{karoxa asenq x, y M ic zut, voch te tvazuegov?}
+\end{ndefinition}
+
+\begin{nexample} (համարժեք մետրիկաների համար) \\
+$M = M_1 = \R^n \Rightarrow \widetilde(M) = \R^n$ \red{hn?} \\
+$\rho(x,y) = \sqrt{\sum\limits_{i=1}^{n} (x_i - y_i)^2}$ \\ 
+$\rho_1(x,y) = \max\limits_{1 \leq i \leq n} {\abs{x_i - y_i}}$ \\
+$\rho(x,y) = \sqrt{(x_1 -y_1)^2 + (x_2 -y_2)^2 + \cdots + (x_n -y_n)^2} \geq \sqrt{(x_i -y_i)^2} = \abs{x_i - y_i} $
+
+$\rho(x,y) \geq \max\limits_{1 \leq i \leq n} {\abs{x_i - y_i}} = \rho_1(x,y) \Rightarrow \alpha = 1$ \\ 
+$\rho(x,y) \leq \sqrt{n \rho_1^2 (x,y)} = \sqrt{n}\rho_1(x,y) \Rightarrow \beta = \sqrt{n}$ \\ 
+$\Rightarrow$ մետրիկաները համարժեք են 
+\end{nexample}
+
+%%%%%%%% 6 %%%%%%%%
+
+\begin{ndefinition} % sahm 3, fundamental
+Կասենք որ $\{ x_n\} \in M$ հաջորդականությունը ֆունդամենտալ է $(M, \rho)$ մետրիկական տարածությունում, եթե $\forall \varepsilon > 0, \exists n_0(\varepsilon) \in \N$ $s.t.$ $m, n > n_0(\varepsilon) \Rightarrow \rho(x_m, x_n) < \varepsilon$    
+\end{ndefinition}
+
+\begin{ndefinition} % sahm 4, zugamitel
+Կասենք, որ $\{ x_n\}$ հաջորդականությունը զուգամիտում է $x_0 \in M$ էլեմենտին $(M, \rho)$ մետրիկական տարածությունում, եթե $\forall \varepsilon > 0, \exists n_0(\varepsilon) \in \N$ $s.t.$,  $n > n_0(\varepsilon) \Rightarrow \rho(x_n, x_0) < \varepsilon$   
+\end{ndefinition}
+
+\begin{nexample}
+$\R$ - ռացիոնալ թվերի բազմություն \\ $x_n = (1+\frac{1}{n})^n, \quad \rho(x,y) = \abs{x-y}$  \\ 
+$(\R, \rho)$-ում $\{ x_n \}$-ը ֆունդամենտալ է, բայց զուգամետ չէ: \red{գուցե նշենք որովհետև սահմանը ե-ն ա}
+\end{nexample}
+
+\begin{nexample} (Օրինակ ոչ համարժեք մետրիկայի համար)\\
+$M = C[0,1]$\\
+(1) $\rho_1(f,g) = \max\limits_{x \in [0,1]} \abs{f(x) - g(x)}, \quad f, g \in C[0,1]$ \\
+(2) $\rho_2(f,g) = \int\limits_{0}^{1} \abs{f(x) - g(x)} \d x, \quad f, g \in C[0,1]$ 
+(կոռեկտությունը ակնհայտ է) \\ 
+(համոզվել որ $\rho_1$-ը և $\rho_2$-ը հանդիսանում են մետրիկաներ): \\ 
+\includegraphics[scale=0.5]{images/funk, del.png} 
+$\{ g_n(x) \}_1^\infty$ (Հիլբերտի հաջորդականություն) \\ 
+Ցույց տանք որ $\rho_1$-ով ֆունդամենտալ չէ, իսկ $\rho_2$-ով նույնիսկ զուգամետ է։
+
+$\forall m, n \in \N, \quad m \neq n, \quad \rho_1(g_m, g_n) = 1$ (ըստ (1)-ի) $\rightarrow$ \red{insert reference} Ստացվածից բխում է, որ $\rho_1$ մետրիկայով  $\{ g_n \}$ հաջորդականությունը ֆունդամենտալ չէ։ Այժմ ցույց տանք, որ $\rho_2$ մետրիկայով ՝ $\rho_2(g_n, 0) \underset{n \to \infty} \longrightarrow 0$ \\
+$\rho_2 (g_n, 0) = \int\limits_{0}^{1} \abs{g_n(x) \d x} = \int\limits_{2n-1}^{2n+1} \abs{g_n(x) \d x} = \dfrac{1}{2}\cdot 1 \cdot \left( \dfrac{1}{2n-1} - \dfrac{1}{2n+1} \right) = \dfrac{1}{4n^2 - 1} \underset{n \to \infty} \longrightarrow 0$ 
+
+Ստացանք, որ $\rho_2$-ով $\{ g_n \}$-ը զուգամետ է։ \\
+
+Ասվածից և համարժեք մետրկաների սահմանումից պարզ է դառնում, որ $\rho_1$ և $\rho_2$ մետրիկաները չեն կարող լինել համարժեք։
+
+
+\end{nexample}
+
+
+\textbf{Օժանդակ լեմմա} \\
+Եթե $(M, \rho)$-ն մետրիկական տարածություն է, ապա տեղի ունի հետևյալ անհավասարությունը․
+$(\star)$ $\abs{\rho(x,z) - \rho(y,z) \leq \rho(x,y)}, \quad \forall x, y, z \in M$ \red{nshenq vor sa  erankyan hakarak anhavas}
+\begin{proof}
+$(\star)$-ը համարժեք է հետևյալ համակարգին \\
+\begin{cases}
+    \rho(x,z) - \rho(y,z) \leq \rho(x,y) \\
+    \rho(x,z) - \rho(y,z) \geq -\rho(x,y)
+\end{cases}
+$\rightarrow$ սա եռանկյան անհավասարությունն է \\ 
+
+Դիտարկենք $\rho(y, z)$-ը. ըստ եռանկյան աքսիոմի՝ $\rho(y,z) \leq \rho(y,x) + \rho(x,z)$ ըստ $2^{\circ}$-ի դա էլ իր հերթին հավար է լինելու՝ $= \rho(x, y) + \rho(x, z) \Rightarrow \rho(x,z) - \rho(y,z) \geq -\rho(x, y)$
+
+\end{proof}
+
+
+\begin{theorem} % tm 1, sahmany miakna
+Դիցուք $(M, \rho)$-ն մետրիկական տարածություն է, իսկ $\{ x_n\} \in M$ որոշակի զուգամետ հաջորդականություն։ Այդ դեպքում այդ հաջորդականության սահմանը միակն է:
+
+\begin{proof}
+Ենթադրենք $\lim\limits_{n \rightarrow \infty} x_n = x_0$, $\lim\limits_{n \rightarrow \infty} x_n = \widetilde{x_0}$ \\ 
+$\forall \varepsilon > 0 \quad \exists n_1(\varepsilon) \in \N$, $s. t.$ $n > n_1(\varepsilon) \Rightarrow \rho(x_n, x_0) < \varepsilon$ \\
+$\forall \varepsilon > 0  \quad \exists n_2(\varepsilon) \in \N$, $s. t.$ $n > n_2(\varepsilon) \Rightarrow \rho(x_n, \widetilde{x_0}) < \varepsilon$ \\  
+
+Տրված $\varepsilon$-ի համար $n$-ը ընտրելուվ $\max(n_1(\varepsilon), n_2(\varepsilon))$-ից մեծ կունենանք.
+\[
+\begin{cases}
+ \rho(x_n, x_0) < \varepsilon \\ 
+ \rho(x_n, \widetilde{x_0}) < \varepsilon \\ 
+\end{cases}
+\]
+$\rho(x_0, \widetilde{x_0}) \leq \rho(x_0, x_n) + \rho(x_n, \widetilde{x_0}) = \rho(x_n, x_0) + \rho(\widetilde{x_0}, x_n) < \varepsilon + \varepsilon = 2\varepsilon$ \\
+Քանի որ ստացված անհավասարության ձախ կողմը կախված չէ $n$-ից $\Rightarrow$ $\varepsilon$-ի կամայականության շնորհիվ կունենանք, որ $\rho(x_0, \widetilde{x_0}) = 0 \Rightarrow x_0 = \widetilde{x_0}$
+\end{proof}
+\end{theorem}
+
+
+\begin{theorem} % tm 2
+Դիցուք $(M, \rho)$-ն մետրիկական տարածություն է, իսկ $\{ x_n\} \in M$-ը՝ որոշակի զուգամետ հաջորդականություն։ Այդ դեպքում յուրաքանչյուր ֆիքսված $y \in M$-ի համար $\{ \rho(x_n, y) \}_1^{\infty}$ թվային հաջորդականությունը սահմանափակ է։
+
+\begin{proof}
+$\varepsilon = 1$-ի համար $\exists n_0 \in \N$ $s. t.$, $n \geq n_0 \Rightarrow \rho(x_n, x_0) < 1$\\ 
+Դիտարկենք $\rho(x_n, y)$-ը, $\rho(x_n, y) \leq \rho(x_n, x_0) + \rho(x_0, y) < 1 + \rho(x_0, y), \quad n \geq n_0$ \\
+$\rho(x_1, y), \rho(x_2, y), \dots, \rho(x_{n_0 -1}, y)$-վերջավոր հատ են $\Rightarrow$ ունեն մաքսիմում \\
+$\max \{ \rho(x_1, y), \rho(x_2, y), \dots, \rho(x_{n_0 -1}, y) := L$ \\
+$n = 1, 2, \dots, n_0-1 \rightarrow \rho(x_n, y) \leq L$ \\
+Այսպիսով, $\forall n \in \N, \quad \rho(x_n, y) \leq \max \{ L, 1 + \rho(x_0, y) \} := C$ \\ 
+$\rho(x_n, y) \geq 0$
+\end{proof}
+
+\end{theorem}
+\end{document}

@@ -6,6 +6,8 @@ from dict_to_render import to_render
 # matplotlib: force computer modern font set
 plt.rc('mathtext', fontset='cm')
 
+# plt.rcParams['text.usetex'] = True
+# plt.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}'] #for \text command
 
 def tex2svg(formula, save_path, fontsize=12, dpi=300):
     """Render TeX formula to SVG.

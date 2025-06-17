@@ -2,7 +2,7 @@ import os
 from tqdm import tqdm
 
 # The directory that we are interested in
-myPath = "../../../"
+myPath = r"C:\Users\hayk_"
 
 # The min size of the file in Bytes
 mySize = 300_000_000
@@ -10,10 +10,12 @@ mySize = 300_000_000
 # All the file paths will be stored in this list
 filesList= []
 folders_to_ignore = ["YSU OpenCourseWare", "videos Python"]
+# folders_to_ignore = []
 
 files_dict = {}
 
 for path, subdirs, files in tqdm(os.walk(myPath)):
+    print(path)
     for name in files:
         filesList.append(os.path.join(path, name))
 

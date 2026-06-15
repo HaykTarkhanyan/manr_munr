@@ -1,0 +1,13 @@
+{
+    "_help": "Place a video link near a PDF page. Keyed by volume ('1' or '2'). Each entry: page = 1-based PDF page (same numbering as the bookmarks JSON); label = short caption; url = the video link; position = top-right | top-left | bottom-right | bottom-left | right-margin, OR an explicit [x, y] point in PDF points (origin top-left). 'position' is ignored by the 'footnote' style (always bottom). Optional 'style' per entry overrides the run default.",
+    "1": [
+        {"page": 6,   "label": "What are real numbers?", "url": "https://youtu.be/dQw4w9WgXcQ", "position": "top-right"},
+        {"page": 30,  "label": "Sequence limits",        "url": "https://youtu.be/dQw4w9WgXcQ", "position": "top-right"},
+        {"page": 41,  "label": "Monotone sequences",     "url": "https://youtu.be/9bZkp7q19f0", "position": "top-right"},
+        {"page": 117, "label": "Taylor's formula",       "url": "https://youtu.be/9bZkp7q19f0", "position": "right-margin"}
+    ],
+    "2": [
+        {"page": 110, "label": "Stieltjes integral",     "url": "https://youtu.be/dQw4w9WgXcQ", "position": "top-right"},
+        {"page": 124, "label": "Fourier series",         "url": "https://youtu.be/9bZkp7q19f0", "position": "top-right"}
+    ]
+}

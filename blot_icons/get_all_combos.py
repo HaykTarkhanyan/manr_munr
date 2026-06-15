@@ -1,3 +1,5 @@
+# https://chatgpt.com/share/e/688407c9-0658-8012-a73c-e1f7c35ed482
+
 # generate_four_of_a_kind_all.py
 """
 Generate four‑of‑a‑kind composites for all ranks (7 through Ace) plus three special

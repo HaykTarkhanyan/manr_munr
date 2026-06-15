@@ -15,7 +15,7 @@ folders_to_ignore = ["YSU OpenCourseWare", "videos Python"]
 files_dict = {}
 
 for path, subdirs, files in tqdm(os.walk(myPath)):
-    print(path)
+    # print(path)
     for name in files:
         filesList.append(os.path.join(path, name))
 
@@ -40,8 +40,8 @@ dict_new = {}
 for file, size in sorted_files.items():
     if size > 1000:
         print(f"{size/1024:.2f} gb - {file} ")
-    else:
-        print(f"{size} mb - {file} ")
+    # else:
+    #     print(f"{size} mb - {file} ")
         
 # save to json  
 import json

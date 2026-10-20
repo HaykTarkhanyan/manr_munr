@@ -3,8 +3,24 @@
 Newest at the top. See the script docstrings for mechanism-level detail; this file
 records choices someone would otherwise have to reverse-engineer.
 
+## 8. Section/subsection links are thin footnote lines, capacity-aware, both lecturers
+- **Date / status:** 2026-10-20, active; supersedes #2 (owner asked for the full set)
+- **Why:** 336 placeable section/subsection matches land on 228 pages (max 4 per
+  page), so the big cards would bury the text; the footnote style stacks 14pt lines
+  in whatever band stays clear below the page's content (text, formulas, printed
+  footnotes, badges). Lines keep book order, label = "heading · lecturer surname"
+  (surname never truncated), score decides drops on overfull pages. Measured: all
+  336 lines fit, 0 dropped. Headings opening on a chapter-card page are skipped
+  (32 matches) because the chapter card is derived from exactly that heading's link.
+- **Alternatives rejected:** Cards everywhere (4 cards do not fit on a 420pt page);
+  margin chips (collide with the dense scan margins); capping subsections to one
+  lecturer (owner chose both lecturers for chapters, same policy kept).
+- **What would change this:** Print tests showing the foot lines clash with the
+  books' printed footnotes, or reader feedback that 4 lines is too loud.
+
 ## 7. A reader-info page is inserted at build time, before the first chapter
-- **Date / status:** 2026-09-04, active (wording is DRAFT - owner will finalize)
+- **Date / status:** 2026-09-04, active; wording finalized 2026-10-20 (mentions
+  search, bookmarks, cards AND the footnote lines)
 - **Why:** Owner wants readers told the PDF is Ctrl+F-searchable, has bookmarks and
   video cards, and that extra material lives at mathteam.notion.site (clickable).
   Inserted by build.py in BOTH volumes, so the source PDFs and the bookmarks/links
@@ -60,7 +76,8 @@ records choices someone would otherwise have to reverse-engineer.
   absolute (`C:/Windows/Fonts/seguisb.ttf`).
 
 ## 2. Links go on chapter headings only (user decision)
-- **Date / status:** 2026-09-04, active
+- **Date / status:** 2026-09-04, superseded by #8 (2026-10-20: owner asked for the
+  full placeable set)
 - **Why:** Owner chose low clutter: 20 links across 16 chapters. The 306 placeable
   section/subsection matches stay in `videos/matches.json`, curated and ready, so a
   later pass can widen scope without redoing any matching.

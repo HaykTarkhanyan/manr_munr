@@ -1,14 +1,16 @@
-"""Generate video_links.json (chapter links) from videos/matches.json.
+"""Generate video_links.json from videos/matches.json.
 
-Takes every level-1 (chapter) row of videos/matches.json and emits one entry per
-placeable match (confidence high / manual / chapter) into video_links.json, which
-build.py draws onto the final PDFs. Chapters audited as having no honest video on
-the channel (15, 16, 19) have no placeable match and so get no entry.
-
-Label = "<lecturer> · <course>", because a chapter badge answers "who teaches this,
-in which course" - the chapter heading printed right next to it already says what
-the material is. Dual-lecturer chapters produce two entries on the same page;
-the placement code stacks them without overlap.
+Every placeable match (confidence high / manual / chapter) becomes an entry that
+build.py draws onto the final PDFs:
+  - chapter (level-1) rows -> card entries on the chapter's opening page, labeled
+    "<lecturer> · <course>" (the heading next to the card already names the topic);
+  - section/subsection rows -> 'footnote' line entries at the page foot, labeled
+    "<heading> · <lecturer surname>", both lecturers where both match, carrying the
+    match score so an overfull page can drop the weakest line.
+Section headings that open on a chapter-card page are skipped: the chapter link is
+derived from exactly that opening heading, so a line there duplicates the card.
+Chapters audited as having no honest video on the channel (15, 16, 19) have no
+placeable match and so get no entry.
 
 Usage:  python opus_4_8_musoyan_qrs/make_video_links.py
 """
@@ -32,8 +34,9 @@ HELP = (
     "link; position = top-right | top-left | bottom-right | bottom-left | "
     "bottom-center | right-margin, "
     "OR an explicit [x, y] point in PDF points (origin top-left). 'position' is ignored "
-    "by the 'footnote' style (always bottom). Optional 'style' per entry overrides the "
-    "run default."
+    "by the 'footnote' style (always a stacked line at the page foot). Optional 'style' "
+    "per entry overrides the run default; 'score' lets an overfull footnote band drop "
+    "the weakest lines."
 )
 
 
@@ -58,48 +61,71 @@ def setup_logging() -> logging.Logger:
 log = setup_logging()
 
 
+def clean_url(m: dict) -> str:
+    url = m["url"]
+    if url.endswith("?t=0"):  # a link to the start needs no timestamp
+        url = url[: -len("?t=0")]
+    return url
+
+
 def main() -> None:
     rows = json.loads(MATCHES.read_text(encoding="utf-8"))
     config = {"_help": HELP, "1": [], "2": []}
-    chapters_linked = 0
+    chapter_pages = {(r["vol"], r["page"]) for r in rows if r["level"] == 1
+                     and any(m["confidence"] in PLACEABLE for m in r["matches"])}
+    chapters_linked = lines = skipped = 0
     for row in rows:
-        if row["level"] != 1:
-            continue
         matches = [m for m in row["matches"] if m["confidence"] in PLACEABLE]
         if not matches:
-            log.info(f"no link: v{row['vol']} {row['title']}")
+            if row["level"] == 1:
+                log.info(f"no link: v{row['vol']} {row['title']}")
             continue
-        chapters_linked += 1
-        if len(matches) > 2:
-            raise ValueError(f"{row['title']!r} has {len(matches)} placeable matches; "
-                             f"only two fit side by side on a page")
-        # Chapter opening pages are dense up top (chapter heading + text), so badges
-        # live at the page foot. A lone card is centered (a one-sided card looks
-        # asymmetric); a dual-lecturer pair sits mirrored, best match on the right.
-        # matches.json keeps matches sorted by score, best first.
-        positions = ("bottom-center",) if len(matches) == 1 else ("bottom-right", "bottom-left")
-        for m, position in zip(matches, positions):
-            if not m.get("lecturer") or not m.get("course"):
-                raise ValueError(
-                    f"match for {row['title']!r} lacks lecturer/course: {m}"
-                )
-            url = m["url"]
-            if url.endswith("?t=0"):  # a link to the start needs no timestamp
-                url = url[: -len("?t=0")]
-            config[row["vol"]].append({
-                "page": row["page"],
-                "label": f"{m['lecturer']} · {m['course']}",
-                "url": url,
-                "position": position,
-            })
+        for m in matches:
+            if not m.get("lecturer"):
+                raise ValueError(f"match for {row['title']!r} lacks a lecturer: {m}")
+
+        if row["level"] == 1:
+            chapters_linked += 1
+            if len(matches) > 2:
+                raise ValueError(f"{row['title']!r} has {len(matches)} placeable "
+                                 f"matches; only two fit side by side on a page")
+            # Chapter opening pages are dense up top (chapter heading + text), so
+            # badges live at the page foot. A lone card is centered (a one-sided card
+            # looks asymmetric); a dual-lecturer pair sits mirrored, best match on
+            # the right. matches.json keeps matches sorted by score, best first.
+            positions = ("bottom-center",) if len(matches) == 1 else ("bottom-right",
+                                                                      "bottom-left")
+            for m, position in zip(matches, positions):
+                if not m.get("course"):
+                    raise ValueError(f"match for {row['title']!r} lacks a course: {m}")
+                config[row["vol"]].append({
+                    "page": row["page"],
+                    "label": f"{m['lecturer']} · {m['course']}",
+                    "url": clean_url(m),
+                    "position": position,
+                })
+        else:
+            if (row["vol"], row["page"]) in chapter_pages:
+                skipped += len(matches)  # the chapter card already IS this link
+                continue
+            for m in matches:
+                config[row["vol"]].append({
+                    "page": row["page"],
+                    "label": f"{row['title']} · {m['lecturer'].split()[-1]}",
+                    "url": clean_url(m),
+                    "style": "footnote",
+                    "score": m["score"],
+                })
+                lines += 1
 
     for vol in ("1", "2"):
-        config[vol].sort(key=lambda e: e["page"])
+        config[vol].sort(key=lambda e: e["page"])  # stable: keeps book order per page
     OUT.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8")
     n1, n2 = len(config["1"]), len(config["2"])
-    log.info(f"wrote {OUT.name}: {n1 + n2} links ({n1} vol 1, {n2} vol 2) "
-             f"across {chapters_linked} chapters")
+    log.info(f"wrote {OUT.name}: {n1 + n2} links ({n1} vol 1, {n2} vol 2) - "
+             f"{n1 + n2 - lines} chapter cards on {chapters_linked} chapters, "
+             f"{lines} section/subsection lines, {skipped} skipped on chapter pages")
 
 
 if __name__ == "__main__":

@@ -22,15 +22,14 @@ import json
 import logging
 import re
 import sys
-from collections import defaultdict
 from pathlib import Path
 
 import fitz  # PyMuPDF
 
 from apply_bookmarks import build_toc, level_counts
 from place_video_links import (
-    badge_size, anchor_xy, draw_footnote, load_entries, verify_links, DRAWERS,
-    LABEL_TTF, LABEL_FONTNAME,
+    draw_entries, load_entries, verify_links,
+    LABEL_TTF, LABEL_FONTNAME, LABEL_FONT, REG_TTF, REG_FONTNAME, REG_FONT,
 )
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -45,17 +44,16 @@ VOLUMES = [
 ]
 
 # ---- reader-info page, inserted right before the first chapter of each volume ----
-# DRAFT wording - edit these constants to finalize the text.
-REG_TTF = "C:/Windows/Fonts/segoeui.ttf"  # Segoe UI Regular, has Armenian glyphs
-REG_FONTNAME = "SegoeUIRegular"
+# Wording finalized 2026-10-20; stay away from U+2024 (no glyph in Segoe UI).
 INFO_TITLE = "Ընթերցողին"
 INFO_ITEMS = [
     "Փաստաթուղթը որոնելի է։ Սեղմեք Ctrl+F (Mac-ում՝ Cmd+F)՝ ցանկացած "
     "բառ կամ արտահայտություն գտնելու համար։",
-    "Գրքի կառուցվածքով կարող եք տեղաշարժվել ձախ վահանակի էջանիշերի "
-    "(bookmarks) միջոցով։",
-    "Գլուխների առաջին էջերի կարմիր քարտերը բացում են համապատասխան "
-    "տեսադասախոսությունները YouTube-ում։",
+    "Գլուխների և պարագրաֆների միջև կարող եք արագ տեղաշարժվել ձախ "
+    "վահանակի էջանիշերի (bookmarks) օգնությամբ։",
+    "Կարմիր քարտերը և էջերի ներքևի կարմիր տողերը բացում են թեմայի "
+    "տեսադասախոսությունը YouTube-ում՝ հենց այն պահից, որտեղից այդ "
+    "թեման սկսվում է։",
 ]
 INFO_LINK_LABEL = "Լրացուցիչ նյութեր՝ "
 INFO_URL = "https://mathteam.notion.site/"
@@ -106,7 +104,7 @@ def insert_info_page(doc: fitz.Document, insert_at: int) -> None:
     """Insert the reader-info page so it becomes 1-based page `insert_at`."""
     ref = doc[insert_at - 1].rect  # match the size of the page being displaced
     page = doc.new_page(pno=insert_at - 1, width=ref.width, height=ref.height)
-    reg, sb = fitz.Font(fontfile=REG_TTF), fitz.Font(fontfile=LABEL_TTF)
+    reg, sb = REG_FONT, LABEL_FONT
     W = page.rect.width
     margin, indent = 60.0, 16.0
     body, lh = 10.5, 17.0
@@ -140,25 +138,17 @@ def insert_info_page(doc: fitz.Document, insert_at: int) -> None:
 
 
 def draw_links(doc: fitz.Document, vol: str, style: str, shift_at: int) -> list:
-    """Draw all configured links; pages >= shift_at move +1 for the inserted page."""
+    """Draw all configured links; pages >= shift_at move +1 for the inserted page.
+    Returns the entries actually placed (overfull footnote bands drop by score)."""
     entries = [dict(e) for e in load_entries(vol)]
     for e in entries:
         if e["page"] >= shift_at:
             e["page"] += 1
-    footnote_slot = defaultdict(int)
-    taken = defaultdict(list)  # badges already on the page, per page number
-    for e in entries:
-        page = doc[e["page"] - 1]
-        this_style = e.get("style", style)
-        if this_style == "footnote":
-            draw_footnote(page, e["label"], e["url"], footnote_slot[page.number])
-            footnote_slot[page.number] += 1
-        else:
-            w, h = badge_size(this_style, e["label"], e["url"])
-            x, y = anchor_xy(page, e["position"], w, h, taken=taken[page.number])
-            taken[page.number].append(fitz.Rect(x, y, x + w, y + h))
-            DRAWERS[this_style](page, x, y, e["label"], e["url"])
-    return entries
+    placed, dropped = draw_entries(doc, entries, style)
+    if dropped:
+        log.warning(f"vol{vol}: {len(dropped)} footnote line(s) dropped for lack of "
+                    f"page space (see warnings above)")
+    return placed
 
 
 def build_one(vol: str, pdf_name: str, json_name: str, out_name: str, style: str):

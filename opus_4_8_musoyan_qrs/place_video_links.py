@@ -12,10 +12,14 @@ Styles:
   card      play button + bold label (wraps) + the URL              -> most informative
   footnote  thin rule + 'Video - <label>: <url>' line at page foot  -> least intrusive
 
-Card labels are drawn in an embedded Armenian-capable font (chip/footnote labels are
-still base-14 Helvetica, Latin only). Saving INCREMENTALLY embeds that whole face
-(~+1 MB); build.py does a full save plus doc.subset_fonts() and pays only KB - so
-use build.py for the real output, and this script for quick per-style previews.
+Card and footnote labels are drawn in embedded Armenian-capable fonts (chip labels
+are still base-14 Helvetica, Latin only). Saving INCREMENTALLY embeds whole faces
+(~+1 MB each); build.py does a full save plus doc.subset_fonts() and pays only KB -
+so use build.py for the real output, and this script for quick per-style previews.
+
+Footnote lines are capacity-limited per page: they stack upward from the bottom
+margin inside the band left clear by text, formulas and badges, and when a page
+needs more lines than fit, the lowest-score entries are dropped with a warning.
 
 Usage:
   python opus_4_8_musoyan_qrs/place_video_links.py --style icon
@@ -49,12 +53,16 @@ WHITE = (1, 1, 1)
 PILL_FILL = (1.0, 0.93, 0.93)
 RULE_GREY = (0.75, 0.75, 0.75)
 FONT = "helv"  # base-14, never embedded; fine for URLs (pure Latin)
-# Card labels are Armenian, which base-14 fonts cannot encode (they render as dots,
-# silently). So labels use an embedded Armenian-capable face; build.py subsets it on
-# save so the whole ~2 MB font costs only KB in the output.
+# Card and footnote labels are Armenian, which base-14 fonts cannot encode (they
+# render as dots, silently). So labels use embedded Armenian-capable faces; build.py
+# subsets them on save so the whole ~2 MB fonts cost only KB in the output.
 LABEL_TTF = "C:/Windows/Fonts/seguisb.ttf"  # Segoe UI Semibold, has Armenian glyphs
 LABEL_FONTNAME = "SegoeUISemibold"
 LABEL_FONT = fitz.Font(fontfile=LABEL_TTF)
+REG_TTF = "C:/Windows/Fonts/segoeui.ttf"  # Segoe UI Regular, has Armenian glyphs
+REG_FONTNAME = "SegoeUIRegular"
+REG_FONT = fitz.Font(fontfile=REG_TTF)
+EMBEDDED = {LABEL_FONTNAME: LABEL_FONT, REG_FONTNAME: REG_FONT}
 
 LABEL_SIZE = 8.5
 URL_SIZE = 7.5
@@ -63,6 +71,8 @@ CARD_LINES = 2
 CARD_LINE_H = 11.0
 CHIP_TEXT_W = 150.0
 BADGE_PAD = 6.0  # clear space demanded around a badge; 0 lets it sit 1pt off a heading
+FOOT_LINE_H = 14.0  # vertical step between stacked footnote lines
+FOOT_SIZE = 8.0
 
 
 def setup_logging() -> logging.Logger:
@@ -100,9 +110,9 @@ def add_link(page: fitz.Page, rect: fitz.Rect, url: str) -> None:
 
 def text_len(text: str, fontname: str, fontsize: float) -> float:
     """Text width; fitz.get_text_length only knows base-14 fonts, so the embedded
-    label face measures through its Font object."""
-    if fontname == LABEL_FONTNAME:
-        return LABEL_FONT.text_length(text, fontsize=fontsize)
+    faces measure through their Font objects."""
+    if fontname in EMBEDDED:
+        return EMBEDDED[fontname].text_length(text, fontsize=fontsize)
     return fitz.get_text_length(text, fontname=fontname, fontsize=fontsize)
 
 
@@ -279,17 +289,84 @@ def draw_chip(page: fitz.Page, x: float, y: float, label: str, url: str) -> None
     add_link(page, rect, url)
 
 
-def draw_footnote(page: fitz.Page, label: str, url: str, slot: int) -> None:
+def footnote_capacity(page: fitz.Page, taken: list = ()) -> tuple:
+    """(rule y of the bottom-most slot, how many lines fit) in the clear band under
+    the page's content. Lines stack upward from the bottom margin; the band ends
+    where text, formulas or an already-placed badge begin."""
+    H = page.rect.height
+    blocks = _slot_blocks(page, taken)
+    band_top = max((b.y1 for b in blocks), default=H * 0.5)
+    base_y = H - 18.0 - 13.0  # the rule sits 13pt of line above the bottom margin
+    cap = int((base_y - band_top - BADGE_PAD) // FOOT_LINE_H) + 1
+    return base_y, max(cap, 0)
+
+
+def draw_footnote(page: fitz.Page, label: str, url: str, y: float) -> None:
+    """One 'label:  url' line with a rule and play triangle, whole line clickable.
+    The label is Armenian (embedded Segoe UI); the URL tail stays Helvetica."""
     pr = page.rect
     left, right = pr.x0 + 55, pr.x1 - 55
-    y = pr.y1 - 30 - slot * 14
+    short = url.replace("https://", "").replace("http://", "")
+    tail = f":  {short}"
+    maxw = right - left - 11 - text_len(tail, FONT, FOOT_SIZE)
+    if " · " in label:  # shorten the heading but never the "· lecturer" suffix
+        head, who = label.rsplit(" · ", 1)
+        who = f" · {who}"
+        head = truncate(head, maxw - text_len(who, REG_FONTNAME, FOOT_SIZE),
+                        REG_FONTNAME, FOOT_SIZE)
+        label = head + who
+    else:
+        label = truncate(label, maxw, REG_FONTNAME, FOOT_SIZE)
     page.draw_line((left, y), (right, y), color=RULE_GREY, width=0.5)
     play_triangle(page, left + 4, y + 8, 5, color=YT_RED)
-    short = url.replace("https://", "").replace("http://", "")
-    line = fitz.Rect(left, y + 2, right, y + 15)
-    page.insert_text((left + 11, y + 11), f"Video - {label}:  {short}",
-                     fontname=FONT, fontsize=8, color=DARK_RED)
-    add_link(page, line, url)
+    page.insert_text((left + 11, y + 11), label, fontname=REG_FONTNAME,
+                     fontfile=REG_TTF, fontsize=FOOT_SIZE, color=DARK_RED)
+    page.insert_text((left + 11 + text_len(label, REG_FONTNAME, FOOT_SIZE), y + 11),
+                     tail, fontname=FONT, fontsize=FOOT_SIZE, color=DARK_RED)
+    add_link(page, fitz.Rect(left, y + 2, right, y + 15), url)
+
+
+def draw_entries(doc: fitz.Document, entries: list, style: str) -> tuple:
+    """Draw every entry onto its page; returns (placed, dropped).
+
+    Badges (card/chip/icon) go first and claim their rects; footnote lines then
+    stack in whatever band stays clear at the page foot, kept in book order. When a
+    page needs more lines than fit, the lowest-score entries are dropped loudly.
+    """
+    placed, dropped = [], []
+    taken = defaultdict(list)
+    by_page = defaultdict(list)
+    for e in entries:
+        by_page[e["page"]].append(e)
+
+    for page_no in sorted(by_page):
+        page = doc[page_no - 1]
+        badges = [e for e in by_page[page_no] if e.get("style", style) != "footnote"]
+        feet = [e for e in by_page[page_no] if e.get("style", style) == "footnote"]
+        for e in badges:
+            this_style = e.get("style", style)
+            w, h = badge_size(this_style, e["label"], e["url"])
+            x, y = anchor_xy(page, e["position"], w, h, taken=taken[page_no])
+            taken[page_no].append(fitz.Rect(x, y, x + w, y + h))
+            DRAWERS[this_style](page, x, y, e["label"], e["url"])
+            placed.append(e)
+        if not feet:
+            continue
+        base_y, cap = footnote_capacity(page, taken[page_no])
+        if len(feet) > cap:
+            drop_ids = {id(e) for e in sorted(feet, key=lambda e: e.get("score", 0.0))
+                        [:len(feet) - cap]}
+            for e in feet:
+                if id(e) in drop_ids:
+                    log.warning(f"page {page_no}: footnote band holds {cap} line(s), "
+                                f"dropping lowest-score {e['label']!r}")
+            dropped += [e for e in feet if id(e) in drop_ids]
+            feet = [e for e in feet if id(e) not in drop_ids]
+        for i, e in enumerate(feet):  # first heading on the page = topmost line
+            draw_footnote(page, e["label"], e["url"],
+                          base_y - (len(feet) - 1 - i) * FOOT_LINE_H)
+            placed.append(e)
+    return placed, dropped
 
 
 def load_entries(vol: str) -> list:
@@ -310,28 +387,16 @@ def place(vol: str, style: str) -> Path:
     shutil.copy(src, out)                       # copy so we can append incrementally
     doc = fitz.open(out)
     try:
-        footnote_slot = defaultdict(int)
-        taken = defaultdict(list)  # badges already on the page, per page number
-        for e in entries:
-            page = doc[e["page"] - 1]
-            this_style = e.get("style", style)
-            if this_style == "footnote":
-                draw_footnote(page, e["label"], e["url"], footnote_slot[page.number])
-                footnote_slot[page.number] += 1
-            else:
-                w, h = badge_size(this_style, e["label"], e["url"])
-                x, y = anchor_xy(page, e["position"], w, h, taken=taken[page.number])
-                taken[page.number].append(fitz.Rect(x, y, x + w, y + h))
-                DRAWERS[this_style](page, x, y, e["label"], e["url"])
+        placed, dropped = draw_entries(doc, entries, style)
         # incremental: append only the changes -> tiny delta over the source
         doc.save(out, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP)
     finally:
         doc.close()
 
     delta_kb = (out.stat().st_size - src.stat().st_size) / 1024
-    log.info(f"vol{vol} [{style}]: {len(entries)} links -> {out.name} "
-             f"(+{delta_kb:.1f} KB over source)")
-    return out
+    log.info(f"vol{vol} [{style}]: {len(placed)} links ({len(dropped)} dropped) "
+             f"-> {out.name} (+{delta_kb:.1f} KB over source)")
+    return out, placed
 
 
 def uri_counts(path: Path) -> Counter:
@@ -407,9 +472,10 @@ def main() -> None:
     OUT_DIR.mkdir(exist_ok=True)
     vols = ["1", "2"] if args.volume == "all" else [args.volume]
     for vol in vols:
-        out = place(vol, args.style)
-        if out is not None:
-            verify_links(out, SOURCE[vol], load_entries(vol))
+        result = place(vol, args.style)
+        if result is not None:
+            out, placed = result
+            verify_links(out, SOURCE[vol], placed)
     log.info("Done.")
 
 

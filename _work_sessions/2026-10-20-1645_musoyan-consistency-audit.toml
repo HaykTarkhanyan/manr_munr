@@ -12,14 +12,22 @@ done = [
     "Moved patch_rep.py to opus_4_8_musoyan_qrs/archive/ with README (finished one-off, already applied)",
 ]
 
+done_round5 = [
+    "Owner said 'do all 4': deleted the 6 stale linked_* previews and bash.exe.stackdump",
+    "Committed the accumulated work as checkpoint 721a7af (58 files)",
+    "Finalized the info-page Armenian wording (now also mentions the footnote lines)",
+    "Section-level pass: make_video_links.py now emits all placeable section/subsection matches as 'footnote' line entries (336 lines, 32 skipped on chapter-card pages as duplicates of the card); rewrote draw_footnote - Armenian label font, collision-aware band under the page content, book order, surname-preserving truncation, score-based drop on overflow (0 dropped in practice); shared draw_entries loop now used by both build.py and place_video_links.py",
+    "Rebuilt + verified: 188 + 168 links on 139 + 105 pages, all bookmarks round-trip; visual check on 4-line pages, tight pages, chapter page (no lines), info page",
+    "Final sizes 19.2 MB / 9.0 MB (+1.8% / +3.8% over sources)",
+    "DECISIONS.md: #8 added (footnote lines), #2 superseded, #7 wording finalized",
+]
+
 pending = [
-    "out_pdf/musoyan_*_linked_card/chip/footnote.pdf (6 files, June-era style previews) still contain placeholder Rick Astley links and old bookmarks - style decision is made (card), so they are candidates for deletion or archive/, awaiting owner's call",
-    "opus_4_8_musoyan_qrs/bash.exe.stackdump is a junk crash dump, candidate for deletion",
-    "Everything still uncommitted",
+    "Second commit (section-level pass) made right after this file update",
 ]
 
 next = [
-    "Owner: finalize info-page wording (INFO_* constants in build.py), decide on stale previews, commit",
+    "Possible later: print test of the foot lines, re-fetch channel for new videos",
 ]
 
 files = [

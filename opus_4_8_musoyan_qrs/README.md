@@ -7,6 +7,8 @@ Mathematical Analysis textbook:
 - a clickable YouTube card on each chapter's opening page, pointing at the moment
   in the [Համալսարանական մաթեմատիկա](https://www.youtube.com/channel/UCMFONp28jEDHXDBWJyRVYcA)
   lecture where that chapter's material starts (both lecturers where both teach it),
+- a thin clickable line at the foot of every page where a matched section or
+  subsection begins (336 lines on 228 pages, timestamped, both lecturers),
 - a reader-info page before chapter 1 (searchability, bookmarks, extra materials link).
 
 The deliverables are `out_pdf/musoyan_1_final.pdf` and `out_pdf/musoyan_2_final.pdf`.
@@ -26,7 +28,7 @@ musoyan_{1,2}.pdf            fixed_bookmarks_{1,2}.json      .env (YOUTUBE_DATA_
       |                             |              |
       |                             |       build_match_report.py -> videos/match_report.html  (review UI)
       |                             |              |
-      |                             |       make_video_links.py -> video_links.json  (chapter-level entries)
+      |                             |       make_video_links.py -> video_links.json  (chapter cards + section lines)
       |                             |              |
       +---------- build.py <-------+--------------+
                       |

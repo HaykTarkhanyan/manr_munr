@@ -1,0 +1,57 @@
+{
+  "playlist": {
+    "playlist_id": "PLz3NrXxHz_CAo5a6pKAz2q-pKT2GJ-TOg",
+    "title": "Սեմինարներ",
+    "description": "",
+    "item_count": 4,
+    "tier": "other",
+    "url": "https://www.youtube.com/playlist?list=PLz3NrXxHz_CAo5a6pKAz2q-pKT2GJ-TOg",
+    "fetched_count": 4
+  },
+  "videos": [
+    {
+      "video_id": "o_ldYAd8c70",
+      "title": "LaTeX-ի ներածություն",
+      "description": "Նյութը՝ \nhttps://hayktarkhanyan.github.io/random/latex_tutorial/intro.html\n\nԵթե անգլից լավ եք կարող եք այս տեսանյութը բաց թողել, ու վերևի հղումում հավաքված նյութերը նայել՝ շատ ավելի մանրամասն ու որակյալ բացատրության համար։\n\nԵթե ուզում եք միանալ մաթեմատիկայի նյութեր թվայնացնելուն լրացրեք՝ https://forms.gle/bJWXE29SQ5KrD6tA7\n\nTeX-ի օգնություն ստանալու համար գրեք tex.spasarkum@gmail.com հասցեին\n\n00:00 Ներածություն\n02:30 Կոդի սկիզբ\n10:14 Title, author, date\n12:25 Բաժիններ, Բովանդակություն (toc)\n15:30 Ցուցակներ (enumerate,...) և այլ environment-ներ\n20:50 Տեքստի ֆորմատավորում\n23:05 Հղումներ (hyperref)\n26:45 Աղյուսակ (table)\n30:25 Նկարներ (figures)\n34:10 Մեջբերում (reference)\n37:03 Մաթեմ\n45:35 Հրամանների ստեղծում\n53:11 Հայերեն գրել\n56:04 Geometry, multicol\n58:07 Սլայդեր (beamer)\n58:07 Գծապատկերներ (tikz)\n01:01:50 Quarto\n01:02:23 Օրինակներ\n01:05:58 Միանալ թիմին",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2025-04-17T11:25:55Z",
+      "duration": "PT1H6M12S",
+      "view_count": 350,
+      "url": "https://youtu.be/o_ldYAd8c70",
+      "position": 0
+    },
+    {
+      "video_id": "9pTflZVOzLc",
+      "title": "Վիճակագրության մոլորությունները",
+      "description": "Հոկտեմբերի 15-ին տեղի ունեցավ մեր կողմից կազմակերպված «Վիճակագրության մոլորություները» սեմինարը\nՆմանատիպ միջոցառումների մասին իմանալու և մասնակցելու համար հետևեք մեզ ֆեյսբուքում՝ https://www.facebook.com/sssmathmech",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2021-10-18T14:22:14Z",
+      "duration": "PT35M39S",
+      "view_count": 797,
+      "url": "https://youtu.be/9pTflZVOzLc",
+      "position": 1
+    },
+    {
+      "video_id": "MzAkMWAv8QA",
+      "title": "Խմբերի տեսության սեմինար, մաս 1",
+      "description": "Նոյեմբերի 24-ին տեղի ունեցավ խմբերի տեսության սեմինարների շարքի առաջին սեմինարը։\nՇարքը վարում է Ալբերտ Գևորգյանը։\nՆմանատիպ միջոցառումների մասին իմանալու և մասնակցելու համար հետևեք մեզ ֆեյսբուքում՝ https://www.facebook.com/sssmathmech",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2021-11-29T14:31:36Z",
+      "duration": "PT43M32S",
+      "view_count": 607,
+      "url": "https://youtu.be/MzAkMWAv8QA",
+      "position": 2
+    },
+    {
+      "video_id": "ri0YJwtjmUE",
+      "title": "Խմբերի տեսության սեմինար, մաս 2",
+      "description": "Նոյեմբերի 24-ին տեղի ունեցավ խմբերի տեսության սեմինարների շարքի առաջին սեմինարը։\nՇարքը վարում է Ալբերտ Գևորգյանը։\nՆմանատիպ միջոցառումների մասին իմանալու և մասնակցելու համար հետևեք մեզ ֆեյսբուքում՝ https://www.facebook.com/sssmathmech",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2021-11-29T16:34:56Z",
+      "duration": "PT22M51S",
+      "view_count": 147,
+      "url": "https://youtu.be/ri0YJwtjmUE",
+      "position": 3
+    }
+  ]
+}

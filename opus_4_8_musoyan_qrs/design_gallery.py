@@ -21,7 +21,6 @@ FONTS = {
     "bold": fitz.Font(fontfile="C:/Windows/Fonts/segoeuib.ttf"),
     "syl":  fitz.Font(fontfile="C:/Windows/Fonts/sylfaen.ttf"),
     "noto": fitz.Font(fontfile=str(SCRIPT_DIR.parent / "musoyan" / "NotoSansArmenian-Black.ttf")),
-    "mono": fitz.Font(fontfile="C:/Windows/Fonts/segoeui.ttf"),
 }
 
 TITLE = "Զուգամետ հաջորդականությունների պարզագույն հատկությունները"
@@ -72,6 +71,8 @@ def wrap(font, s, sz, maxw, max_lines=3):
             break
     if cur and len(out) < max_lines:
         out.append(cur)
+    if not out:                        # empty / whitespace-only string
+        return [""]
     if tlen(font, out[-1], sz) > maxw:  # last line still too long -> ellipsize
         out[-1] = truncate(font, out[-1], sz, maxw)
     return out
@@ -448,9 +449,10 @@ def build():
             y += row_h
 
     out = OUT_DIR / "design_gallery.pdf"
+    pages = doc.page_count          # read before close; the doc is unusable afterwards
     doc.save(out, deflate=True)
     doc.close()
-    log.info(f"wrote {out}  ({len(OPTIONS)} options, {doc.page_count if False else (len(OPTIONS)+per_page-1)//per_page} pages)")
+    log.info(f"wrote {out}  ({len(OPTIONS)} options, {pages} pages)")
     return out
 
 

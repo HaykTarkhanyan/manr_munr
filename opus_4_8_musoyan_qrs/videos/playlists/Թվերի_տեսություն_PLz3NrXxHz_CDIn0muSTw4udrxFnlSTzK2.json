@@ -1,0 +1,123 @@
+{
+  "playlist": {
+    "playlist_id": "PLz3NrXxHz_CDIn0muSTw4udrxFnlSTzK2",
+    "title": "Թվերի տեսություն",
+    "description": "Տիգրան Հակոբյանի սեմինարը թվերի տեսության շուրջ։ Տե՛ս նաև https://www.youtube.com/playlist?list=PLz3NrXxHz_CDF0l5rTCoxEqYoG3_na6Cs",
+    "item_count": 10,
+    "tier": "other",
+    "url": "https://www.youtube.com/playlist?list=PLz3NrXxHz_CDIn0muSTw4udrxFnlSTzK2",
+    "fetched_count": 10
+  },
+  "videos": [
+    {
+      "video_id": "guSFTDxfuDI",
+      "title": "15․02 առաջին լեկցիա",
+      "description": "",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-04-11T19:55:31Z",
+      "duration": "PT1H11M59S",
+      "view_count": 468,
+      "url": "https://youtu.be/guSFTDxfuDI",
+      "position": 0
+    },
+    {
+      "video_id": "_ZI_lEUpNSU",
+      "title": "17,02 առաջին գործ",
+      "description": "",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-04-11T19:55:34Z",
+      "duration": "PT1H18M8S",
+      "view_count": 131,
+      "url": "https://youtu.be/_ZI_lEUpNSU",
+      "position": 1
+    },
+    {
+      "video_id": "k1VWUN2dSgI",
+      "title": "Թվերի տեսություն, Գործնական N2 24․02․22",
+      "description": "Խնդիրների ֆայլը՝ https://drive.google.com/file/d/10U5wtgQPSi6nEJdaET8Ntw2n7gXDiy28/view?usp=sharing\n\n00:00 - 00:43 - սկիզբ\n00:55 - 09:45 - 4.2 խնդիր (gcd(2^(2^m)+ 1, 2^(2^n)+1)=1-ի հետ կապված)\n11:25 - 44:04 -  խնդիր 2\n44:35 - 55:40 - խնդիր 10\n57:30 - 01:07:40 - Vp(n) ի բացատրություն\n01:07:50 - 01:43:30 - Vp-երով լուծվող խնդիրների քննարկում",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-03-02T10:21:15Z",
+      "duration": "PT1H44M5S",
+      "view_count": 234,
+      "url": "https://youtu.be/k1VWUN2dSgI",
+      "position": 2
+    },
+    {
+      "video_id": "VrqiYwPn5Ps",
+      "title": "Թվերի տեսություն, Տեսական N3 (Թվաբանական ֆունկցիաներ), 01.03.2022",
+      "description": "Լեկցիայի ֆայլը՝  https://drive.google.com/file/d/1HVtW68lXp9_hwI4FmKCxvVE7oq32mBqq/view?usp=sharing\n\n00:00 -  00:35 - սկիզբ\n00:38 - 13:40 - բնական բաժանարարների քանակի ֆունկցիա\n13:42 - 22:24 - բաժանարարների գումար ֆունցկիա\n22:25 - 58:55 - Էյլերի ֆունկցիա\n59:00 - 01:36:20 - Դիրիխլեի փաթույթ\n01:36:40 - 01:39:56 - Մյոբիուսի շրջման առաջին բանաձև",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-03-04T19:14:57Z",
+      "duration": "PT1H39M57S",
+      "view_count": 221,
+      "url": "https://youtu.be/VrqiYwPn5Ps",
+      "position": 3
+    },
+    {
+      "video_id": "ymZ9DpOsC7A",
+      "title": "Թվերի տեսություն, Գործնական N3 03․03․2022",
+      "description": "խնդրիների ֆայլը՝ https://drive.google.com/file/d/10U5wtgQPSi6nEJdaET8Ntw2n7gXDiy28/view?usp=sharing\n\n00:00 - 06:43 - խնդիր 11\n06:44 - 12:20 - խնդիր 12\n12:45 - 19:30 - խնդիր 13, լուծում 1\n19:31 - 22:25 - խնդիր 13, լուծում 2\n22:50 - 34:12 - խնդիր 14, լուծում 1\n34:13 - 36:50 - խնդիր 14, լուծում 2\n36:55 - 40:10 - խնդիր 14, լուծում 3 (էլեգանտ լուծում)\n41:20 - 49:10 - խնդիր 15\n50:20 - 01:00:05 - խնդիր 17\n01:00:15 - 01:04:50 - խնդիր 17, օրինակ \n01:05:15 - 01:12:32 - խնդիր 18, լուծում 1\n01:12:40 - 01:16:20 - խնդիր 18, լուծում 2\n01:17:30 - 01:29:50 - խնդիր 19 (Պյութագորյան եռյակներ)\n01:30:02 - 01:41:00 - խնդիր 20 (հարմոնիկ գումար)",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-03-05T15:16:51Z",
+      "duration": "PT1H41M2S",
+      "view_count": 134,
+      "url": "https://youtu.be/ymZ9DpOsC7A",
+      "position": 4
+    },
+    {
+      "video_id": "Efcdi29RomY",
+      "title": "10.03.2022 լեկցիա 4",
+      "description": "լեկցիա 4",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-03-13T11:47:22Z",
+      "duration": "PT1H28M37S",
+      "view_count": 116,
+      "url": "https://youtu.be/Efcdi29RomY",
+      "position": 5
+    },
+    {
+      "video_id": "nVbpTbfUz78",
+      "title": "գործնական 3.1 15․03",
+      "description": "",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-03-26T09:09:56Z",
+      "duration": "PT1H26M21S",
+      "view_count": 104,
+      "url": "https://youtu.be/nVbpTbfUz78",
+      "position": 6
+    },
+    {
+      "video_id": "3HJZQtbHj3M",
+      "title": "գործնական 3.2 17.03",
+      "description": "խնդիրներ՝ https://drive.google.com/file/d/1PhoMCj3HoWMPLsUqSFgi9YnLvl7TMvEm/view?usp=sharing\nտեսություն՝ https://drive.google.com/file/d/1HVtW68lXp9_hwI4FmKCxvVE7oq32mBqq/view?usp=sharing\n\n00:00 - 00:20 - սկիզբ\n00:20 - 03:45 - տեսության խնդիր 3․6-ի քննարկում\n04:00 - 12:43 - խնդիր 25, լուծում 1\n12:44 - 20:28 - խնդիր 25, լուծում 2\n21:00 - 43:00 - խնդիր 26\n43:20 - 54:20 - խնդիր 27\n54:29 - 01:00:20 - խնդիր 28.1,  լուծում 1\n01:00:29 - 01:07:59 - խնդիր 28.1,  լուծում 2\n01:08:05 - 01:12:20 - խնդիր 28.2\n01:15:26 - 01:42:20 - խնդիր 30",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-03-26T08:24:03Z",
+      "duration": "PT1H34M35S",
+      "view_count": 183,
+      "url": "https://youtu.be/3HJZQtbHj3M",
+      "position": 7
+    },
+    {
+      "video_id": "6_U528iE_sw",
+      "title": "22 մարտ, գործնական բաղդադումներ",
+      "description": "",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-04-11T19:55:43Z",
+      "duration": "PT1H29M49S",
+      "view_count": 121,
+      "url": "https://youtu.be/6_U528iE_sw",
+      "position": 8
+    },
+    {
+      "video_id": "_wkXkI9a7-E",
+      "title": "29 մարտ, գործնական բաղդադումներ",
+      "description": "",
+      "channel_title": "Համալսարանական մաթեմատիկա",
+      "published_at": "2022-04-11T19:55:48Z",
+      "duration": "PT1H45M36S",
+      "view_count": 133,
+      "url": "https://youtu.be/_wkXkI9a7-E",
+      "position": 9
+    }
+  ]
+}

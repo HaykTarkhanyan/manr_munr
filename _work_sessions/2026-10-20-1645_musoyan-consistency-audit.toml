@@ -1,0 +1,35 @@
+title = "Musoyan: consistency audit after the 10.4 bookmark fix"
+date = "2026-10-20"
+time = "16:45"
+areas = ["opus_4_8_musoyan_qrs"]
+
+done = [
+    "Audited every derived artifact against the fixed sources (scratchpad consistency_audit.py)",
+    "Found musoyan_2_bookmarked.pdf still carried the stale 10.4 page (26 in source numbering); reran apply_bookmarks.py, both intermediates regenerated and round-trip verified, 10.4 now 25",
+    "Re-confirmed: matches.json 10.4 page 25, final PDF bookmark 10.4 -> p26 (25 + info-page shift), match_report.html regenerated from fixed data",
+    "Wrote opus_4_8_musoyan_qrs/README.md - pipeline map, rebuild order, data-file numbering contract, gotcha notes",
+    "Wrote 3 _learnings/ files: base-14 drops Armenian silently, Segoe UI missing U+2024, scan text layer garbles bold headings (audit false positives)",
+    "Moved patch_rep.py to opus_4_8_musoyan_qrs/archive/ with README (finished one-off, already applied)",
+]
+
+pending = [
+    "out_pdf/musoyan_*_linked_card/chip/footnote.pdf (6 files, June-era style previews) still contain placeholder Rick Astley links and old bookmarks - style decision is made (card), so they are candidates for deletion or archive/, awaiting owner's call",
+    "opus_4_8_musoyan_qrs/bash.exe.stackdump is a junk crash dump, candidate for deletion",
+    "Everything still uncommitted",
+]
+
+next = [
+    "Owner: finalize info-page wording (INFO_* constants in build.py), decide on stale previews, commit",
+]
+
+files = [
+    "opus_4_8_musoyan_qrs/out_pdf/musoyan_1_bookmarked.pdf (regenerated)",
+    "opus_4_8_musoyan_qrs/out_pdf/musoyan_2_bookmarked.pdf (regenerated)",
+]
+
+commits = []
+
+notes = """
+Deliverable finals were already correct; only the preview-path intermediate was stale.
+Audit evidence: source JSON 10.4=25, bookmarked PDF 10.4=25, final PDF 10.4=26 (shift), matches.json 10.4=25.
+"""

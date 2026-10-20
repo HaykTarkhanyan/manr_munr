@@ -1,0 +1,54 @@
+title = "Musoyan PDFs: real chapter-level YouTube links replace placeholders"
+date = "2026-09-04"
+time = "15:40"
+areas = ["opus_4_8_musoyan_qrs"]
+
+done = [
+    "Repo check-up of the bookmarking + video-link pipeline built earlier (Opus 4.8 era)",
+    "Found the gap: video_links.json still held 6 placeholder demo links (Rick Astley) and the 'final' PDFs contained them; nothing connected videos/matches.json to the PDF build",
+    "New make_video_links.py: chapter-level (level-1) placeable matches from videos/matches.json -> video_links.json (20 links, 16 chapters; ?t=0 stripped)",
+    "place_video_links.py: card labels now use embedded Segoe UI Semibold (Armenian-capable; base-14 Helvetica rendered Armenian as dots), text width measured via Font.text_length",
+    "place_video_links.py: badge placement now tracks already-placed badges ('taken'), and bottom-left/bottom-right anchors scan upward past footnotes instead of blindly landing at the margin",
+    "CARD_TEXT_W 190 -> 135 so two lecturer cards fit side by side on the 420pt-wide page",
+    "build.py: doc.subset_fonts() before save; draw_links passes taken rects",
+    "Rebuilt musoyan_1_final.pdf (18.1 MB, 254 bookmarks, 9 links) and musoyan_2_final.pdf (8.4 MB, 259 bookmarks, 11 links); verify passes, visual check on 5 chapter pages OK",
+    "Created opus_4_8_musoyan_qrs/DECISIONS.md",
+    "Round 2 (user feedback): lone chapter cards now bottom-center (asymmetric right placement disliked); dual pairs stay mirrored left+right",
+    "Round 2: build.py inserts a reader-info page ('Ընթերցողին') before the first chapter of BOTH volumes - Ctrl+F searchable note, bookmarks note, video-cards note, clickable mathteam.notion.site link; DRAFT wording in INFO_* constants at top of build.py, owner will finalize",
+    "Page insertion shifts all later bookmarks/links +1 at build time; video_links.json and fixed_bookmarks JSONs stay in SOURCE page numbering",
+    "Gotcha: U+2024 (Armenian mid-dot) has no glyph in Segoe UI - renders as a box; use U+0589 (։) instead",
+    "Finals now 343/417 pages, 255/260 bookmarks, verified + visually checked info pages and card placements",
+    "Round 3 (source-data audit): all 20 YouTube links checked live via oembed - every video public, titles match all_videos.json, every ?t= timestamp within video duration; 0 problems",
+    "Round 3: bookmark audit - 30-sample word-match check then full 515-bookmark off-by-one scan; 8 flags, 7 were false positives (scan text layer garbles bold headings, confirmed visually), 1 real: v2 '10.4. Աստիճանային շարքեր' pointed one page late - fixed in fixed_bookmarks_2.json (26 -> 25), rebuilt, verified",
+    "Round 4: reran the full derived chain after the 10.4 fix - reconcile_videos.py (matches.json: exactly 1 field changed, 10.4 page 26->25; analysis_index.json byte-identical, pipeline confirmed deterministic), build_match_report.py (report regenerated), make_video_links.py (video_links.json byte-identical). Finals were already rebuilt from the fixed bookmarks. Everything downstream of the sources is now regenerated and consistent",
+]
+
+pending = [
+    "Everything is uncommitted (this session's work plus pre-session tweaks to build.py/place_video_links.py/design_gallery.py)",
+    "patch_rep.py is a finished one-off (already applied to build_match_report.py) - candidate for an archive/ folder",
+    "MuPDF prints 'cannot find object in xref (3837 0 R)' on any full save of musoyan_1.pdf - pre-existing damage in the source scan, repaired during save, output text layer verified identical",
+]
+
+next = [
+    "If denser coverage is wanted: extend make_video_links.py to sections/subsections (67 + 239 placeable matches already curated in videos/matches.json)",
+    "Chapters 15, 16, 19 have no honest video on the channel - deliberately left without links",
+]
+
+files = [
+    "opus_4_8_musoyan_qrs/make_video_links.py (new)",
+    "opus_4_8_musoyan_qrs/video_links.json (now generated)",
+    "opus_4_8_musoyan_qrs/place_video_links.py",
+    "opus_4_8_musoyan_qrs/build.py",
+    "opus_4_8_musoyan_qrs/DECISIONS.md (new)",
+    "opus_4_8_musoyan_qrs/out_pdf/musoyan_1_final.pdf",
+    "opus_4_8_musoyan_qrs/out_pdf/musoyan_2_final.pdf",
+]
+
+commits = []
+
+notes = """
+User decisions this session (asked up front, then worked autonomously): chapter-level
+links only; card style; both lecturers on dual chapters; leave unmatched chapters
+15/16/19 alone. Label format: '<lecturer> · <course>'. Best match bottom-right,
+second lecturer bottom-left.
+"""

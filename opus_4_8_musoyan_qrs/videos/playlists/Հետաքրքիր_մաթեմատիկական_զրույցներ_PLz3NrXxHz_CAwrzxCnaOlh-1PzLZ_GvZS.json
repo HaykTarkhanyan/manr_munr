@@ -1,0 +1,46 @@
+{
+  "playlist": {
+    "playlist_id": "PLz3NrXxHz_CAwrzxCnaOlh-1PzLZ_GvZS",
+    "title": "Հետաքրքիր մաթեմատիկական զրույցներ",
+    "description": "",
+    "item_count": 3,
+    "tier": "other",
+    "url": "https://www.youtube.com/playlist?list=PLz3NrXxHz_CAwrzxCnaOlh-1PzLZ_GvZS",
+    "fetched_count": 3
+  },
+  "videos": [
+    {
+      "video_id": "TjVmSZ6Yjqc",
+      "title": "Գաուս-Լոբաչևսկի-Բոյայի երկրաչափություն (մաս 1). Հայկ Ղազարյան",
+      "description": "© Բուն TV \nWeb: http://boon.am/ \nFacebook: https://www.facebook.com/boonTVofficial\nTelegram: https://t.me/boon_tv",
+      "channel_title": ":Բուն TV",
+      "published_at": "2015-05-08T17:18:13Z",
+      "duration": "PT13M31S",
+      "view_count": 1279,
+      "url": "https://youtu.be/TjVmSZ6Yjqc",
+      "position": 0
+    },
+    {
+      "video_id": "f_1yi1QCsag",
+      "title": "Աբել Րուֆինիի և Գալուայի տեսությունները (մաս 2). Հայկ Ղազարյան",
+      "description": "© Բուն TV \nWeb: http://boon.am/ \nFacebook: https://www.facebook.com/boonTVofficial\nTelegram: https://t.me/boon_tv",
+      "channel_title": ":Բուն TV",
+      "published_at": "2015-05-09T17:17:02Z",
+      "duration": "PT8M23S",
+      "view_count": 544,
+      "url": "https://youtu.be/f_1yi1QCsag",
+      "position": 1
+    },
+    {
+      "video_id": "krZ1fyWzouw",
+      "title": "Կոնտինուում պրոբլեմ (մաս 3). Հայկ Ղազարյան",
+      "description": "© Բուն TV \nWeb: http://boon.am/ \nFacebook: https://www.facebook.com/boonTVofficial\nTelegram: https://t.me/boon_tv",
+      "channel_title": ":Բուն TV",
+      "published_at": "2015-05-10T17:00:39Z",
+      "duration": "PT6M44S",
+      "view_count": 496,
+      "url": "https://youtu.be/krZ1fyWzouw",
+      "position": 2
+    }
+  ]
+}

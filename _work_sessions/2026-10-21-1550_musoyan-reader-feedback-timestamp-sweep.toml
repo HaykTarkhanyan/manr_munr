@@ -1,0 +1,108 @@
+title = "Musoyan: reader-feedback fix + mid-block timestamp sweep"
+date = "2026-10-21"
+time = "15:50"
+areas = ["opus_4_8_musoyan_qrs"]
+
+done = [
+    "Opened both finals and gave the owner a page-by-page review checklist (scanned the shipped PDFs for card/line placement by link-rect geometry)",
+    "Reader feedback: §2.1.2's link opened at Property 4 instead of the section start - confirmed, my manual override had picked the wrong topic; retimed to the lecture's t=0",
+    "Swept all 388 placeable matches for the same failure shape (continuation-marker topics); 9 flagged, each judged against its lecture's full chapter list",
+    "Retimed 6 links to their block starts (2.1.2, 2.5.6, 4.7.9, 5.4 x2 lecturers, 17.3), dropped 9.4.4 (channel has no Cauchy-product content - no link beats a wrong link), fixed 13.1/18.1 data (unshipped, chapter-card pages), kept 18.4.2 (correct)",
+    "All fixes via manual_matches.json overrides; regenerated matches.json, match_report.html, video_links.json; rebuilt both finals",
+    "Verified in the shipped PDFs: all corrected targets present, zero stale URLs; 355 links now (187 + 168), sizes 18.3 / 8.6 MB",
+    "Learning recorded: _learnings/2026-10-21-1605_video-link-must-target-block-start-not-best-matching-subtopic.md",
+]
+
+done_round2 = [
+    "Owner asked for 'more checks': ran a 5-layer audit of all shipped links",
+    "L1 data integrity (url form, video exists, t within duration AND a real chapter timestamp, label->matches->bookmarks page chain, no silent generator drops): 0 flags; surfaced 21 same-target duplicate lines + 31 order inversions for review",
+    "L2 semantic read of ALL 355 links against their lectures' chapter lists (semantic_table.txt in scratchpad): 26 more retimes to block starts, 7 wrong-object rejections (same-named theorems for integrals vs series: 9.1.3/9.3.2/9.3.4/9.6.3-Մ; Fourier-Dini for Abel-Dini: 9.2.9 both; Fermat for constrained extrema: 16.4.2), 2 exact substitutions where the honest same-object topic existed (9.3.2, 9.6.3 Քեռյան), 5.2/5.2.2/5.2.4 timestamp swap untangled, 3.1.5/3.2.1 moved from R^m lectures to the single-variable ones",
+    "Dedup feature in make_video_links.py: same (page, url) keeps first in book order (24 removed)",
+    "L3 every retime asserted against analysis_index.json before writing; full chain regenerated; finals rebuilt: 324 links (165+159)",
+    "L4 PDF-level: all rects inside pages, no overlapping rects, label<->url pairing verified on all 324 (0 flags)",
+    "L5 oembed liveness: 107/107 distinct videos live",
+    "Visual check: dedup page (v1 final p42) and retimed line (p40) render correctly",
+    "DECISIONS.md #9 (block-start rule, wrong-object rule, dedup); README counts; second learning file (same-name topic, different object)",
+]
+
+done_round3 = [
+    "Owner asked for another check with an independent agent: launched one unanchored general-purpose agent (no access to my findings, DECISIONS, learnings or override notes) to audit the finals its own way",
+    "Agent's structural verdict matched mine exactly (0 issues, 324 links, 513 bookmarks, 40-link render sample, 16-bookmark render sample)",
+    "Agent found real semantic misses: verified all 13 of its claimed video/timestamp targets against analysis_index.json - all correct",
+    "Accepted 17 retargets where an exact same-object landing existed unused: Քեռյան's 1-D A2 L13 (5.4) and definite-integral A2 L15 (5.8 family + 11.3 family), 1-D Cantor (3.3.4), multivar Taylor block (8.3.1), multi-D property blocks (17.3.2/17.3.3/17.6.4), his own improper-properties block (11.1.3), examples block (7.3.5), 6.1.2-Մ block start, 18.2 block start, and 2.1.2 -> L5 t=3411 (the TRUE Property 1 - third and best landing for the reader-reported link)",
+    "Accepted 16 removals (different theorem, no honest substitute): Stone-Weierstrass pair, ch.16 pair, Fourier termwise int/diff x4, Քեռյան-on-Stieltjes x3, 12.1.2-Ք, 2.2.3, 2.5.9, 9.2-Մ, 9.2.2-Մ",
+    "Deliberately NOT applied: stripping the cross-dimension analogue family (Մ multi-D twins on vol-1 1-D headings etc.) - owner policy question, recorded in DECISIONS #10",
+    "Final: 307 links (160+147, 20 cards + 287 lines), rebuilt; re-ran all audit layers: 0 data flags, 0 PDF geometry/pairing flags, 107/107 videos live, order warnings 25 -> 17 (rest reviewed-benign)",
+]
+
+done_round4 = [
+    "Owner installed codex-dispatch plugin and asked for a Codex review too; plugin has no MCP server of its own, so dispatched via `codex exec --sandbox read-only` (model gpt-6-sol, reasoning high)",
+    "Codex's exec helper is BROKEN on this machine ('Failed to create unified exec process: helper_unknown_error: setup refresh had errors' on every CreateProcess) - first run could not even `git diff`; worked around by inlining all diffs + current files + deterministic counts into a 238 KB self-contained prompt (scratchpad codex_review_prompt2.txt)",
+    "Codex returned 7 findings; each verified against the data before acting:",
+    "F2 CONFIRMED (its one 'bug' call): make_video_links.py skips EVERY section match on a chapter-card page without comparing URLs; measured: 24/32 skips are exact card duplicates (fine), 8 are not - 5 material (8.1+8.1.1-Ք and 14.1 both lecturers point at DIFFERENT videos than their cards; 10.1-Մ dropped on v2 p4 where Մ has no card at all) + 3 same-video-later-timestamp (7.1-Ք +2381s, 12.1-Մ +1146s, 17.1.1-Մ +268s). NOT fixed - layout question for the owner (lines would join cards on 7 chapter opening pages)",
+    "F7 CONFIRMED (inconsistency): DECISIONS #10 didn't explain 324-307=17 vs 16 removals; proved via git-HEAD matches.json that 8.3.1's retarget newly collided with 8.3 (dedup 24->25) while 5.8/5.8.1 were a dedup pair before AND after; DECISIONS #10 amended with the arithmetic",
+    "F3 verified harmless: 13 heading+lecturer pairs in both override and _reject; reconcile filters scorer picks on BOTH conditions (reconcile_videos.py:437), override wins - redundant belt-and-braces, left as is",
+    "F4 REJECTED (hallucination): claimed 14.3.1 in both _reject and _approve; grep shows the key exists once, in _reject only",
+    "F1/F5/F6 known-by-design: dedup ignores lecturer (same url = same video moment), _help key (underscore keys deliberately skipped), clean_url drops ?t=0",
+]
+
+done_round5 = [
+    "Owner: 'do the fixes and perhaps launch another codex agent for checking' - applied the Codex F2 fix",
+    "First audited the 8 never-shipped suppressed links against chapter lists: 4 were WRONG (7.1-Ք t=2381 and 12.1-Մ t=3140 were best-title mid-block landings whose honest block start equals the chapter card; 8.1/8.1.1-Ք pointed at Դաս 12 = higher-order partials = §8.2.1's lesson, honest Դաս 8 t=0 = the card) -> 4 overrides (source 'codex review 2026-10-21'); 4 were honest distinct links (10.1-Մ, 14.1-Մ, 14.1-Ք, 17.1.1-Մ)",
+    "make_video_links.py: skip on chapter-card pages now compares urls (skip only an exact duplicate of a card on the page), not pages",
+    "place_video_links.footnote_capacity: line stack now sits ABOVE foot badges; excludes text ink inside badge rects (a drawn card's label is real insert_text text - _slot_blocks' 'drawn badges are invisible' claim is false for the card style; learning file 2026-10-21-1950)",
+    "Result: 311 placeable (160+151), 309 placed - v2 p5 (10.1-Մ) and p229 (17.1.1-Մ) each carry 1 line above the card(s), verified by render; p125's two 14.1 lines drop loudly (20pt gap, 27pt needed)",
+    "Audits re-run: audit1 0 hard flags (18 order warnings, +1 benign cross-chapter reuse), audit4 0 flags (149 rects vs 151 expected = the known p125 drop), audit5 107/107 live",
+    "DECISIONS #11, README counts (289 lines on 216 pages), this TOML; second Codex review dispatched for the fix round",
+    "Codex round 2 verdict: agrees with all 4 retargets and all 4 keeps; url-skip and geometry clean; one accepted improvement - footnote_capacity now takes the PRE-draw occupied rects (draw_entries captures pre_blocks) instead of excluding blocks intersecting badge rects, which could hide real book text near an explicit [x,y] badge; rebuilt identically (160+149, only p125 drops), audit4 0 flags",
+    "Honesty note: Codex's exec helper is broken on this machine, so both its reviews were packet reviews (it reads only what gets inlined, and was told to trust the deterministic counts) - its semantic/code findings are independent, its count checks are not",
+]
+
+done_round6 = [
+    "Owner asked why Codex can't operate normally and suggested the yolo flag; diagnosed: config.toml has [windows] sandbox = 'elevated', and the elevated helper's 'setup refresh' fails (known Codex-on-Windows bug wave, ownership/file-lock on the cua_node runtime folders; ~/.codex/sandbox.log silent since June), so EVERY CreateProcess is rejected under any --sandbox mode",
+    "Tested --dangerously-bypass-approvals-and-sandbox (yolo): canary run executed git log/status correctly - the bypass skips the broken helper entirely; caveat: nothing enforces read-only in yolo mode, the prompt is the only guardrail",
+    "Codex round 3 (yolo, real repo access, no inlined packet): independently recomputed ALL previously-trusted counts - C1 311=160+151, 20 cards + 291 footnotes; C2 160+149 youtube annotations, only missing = both 14.1 lines on final p125; C3 289 lines on 216 pages (the round-2 unverifiable figure); C4 bookmarks 255/260; C5 all 4 'codex review 2026-10-21' overrides live in matches.json with chapter-index timestamps; C6 diff --stat = the expected 10 files; full-file re-read of both script diffs left the round-2 verdict unchanged",
+    "The packet-review honesty caveat from done_round5 is CLOSED: counts are now independently verified",
+]
+
+done_round7 = [
+    "Owner: 'do codex semantic pass' - dispatched Codex (yolo, repo access) over ALL 311 shipped links with rules R1/R2 and the analogue exception inlined; verdict 274 OK / 18 ANALOGUE / 19 SUSPECT",
+    "Verified all 19 against matches.json + analysis_index.json + manual_matches.json + (where decisive) the book's own page text: 18 confirmed, 1 REJECTED - 17.1.1 retime to t=3443 is wrong because book p228 (v2 source) opens the subsection by DEFINING the coordinate parallelepiped, so t=2993 is the true block start (round-2 Codex and round-5 fix stand)",
+    "Caught 1 shipped link Codex missed: 14.7.3-Մ = Fourier-series half-range expansion on the Fourier-INTEGRAL half-range heading (14.7 = Ֆուրիեի ինտեգրալ section; same series-vs-integral shape as its flagged 14.7.2 pair; 9.x precedent says remove). Also rejected 14.7.3-Ք (Taylor sin(x) expansion!) - turned out conf=review NEVER ships (PLACEABLE = high/manual/chapter), so that one was belt-and-braces, not a shipped fix",
+    "Key realization recorded as a learning: the heading's CONTAINING SECTION defines the object (14.7.x look like perfect series matches until you read that 14.7 is the Fourier integral; ch 11 = improper integrals so 11.3 wanted A4 L16's improper theorems, scores 8.4 in alternates - reopens and supersedes #10's 11.3-family call)",
+    "Applied via manual_matches.json: 8 overrides (4.8.1-Ք t=0, 7.5.4-Ք -> Bolzano-Cauchy 1 t=1039, 8.1.4-Ք -> multivariable tangent-plane lesson t=0, 11.3/11.3.1-Ք -> improper by-parts t=1387, 11.3.2-Ք -> improper substitution t=2277, 13.2.1-Մ t=0, 17.2.2-Մ t=2219) + 12 rejects (4.7.6-Ք, 5.8.4-Ք, 7.5.2-Ք, 12.3.4-Ք, 13.2.5-Մ, 14.7.2 both, 14.7.3 both, 17.6.1-Ք, 18.2.3-Ք, 18.3.3-Ք); gotcha handled: 'manual: reviewed and confirmed' links live in _approve (not overrides) - rejects also strip the _approve entry since override/approve beats reject",
+    "Rebuilt: 297 configured links (156+141 = 311 - 11 shipped removals - 3 new same-page dedups: 11.3.1 vs 11.3, 4.8.1 vs its section, 13.2.1 vs 13.2), 295 placed (p125's 14.1 pair still the only drops), 20 cards + 275 lines on 209 pages; README and DECISIONS (#12, #10 revisit-mark) updated",
+    "Audits: audit1 0 hard flags (order warnings 18 -> 12), audit4 0 flags (156/156, 139/141 = known drops), audit5 108/108 live (retargets added sR8ZU95WiNs; distinct videos 107 -> 108)",
+]
+
+pending = [
+    "Changes uncommitted - owner decides on commit",
+    "Open owner question (DECISIONS #10): keep or strip the cross-dimension analogue links; #12's removals of the series-vs-integral family (14.7.2 both, 14.7.3-Մ) are adjacent to this ruling and reversible with one override each",
+    "p125 (v2 ch 14 opening): 14.1 both lecturers placeable but dropped for space (20pt gap) - acceptable, or owner may want a layout tweak",
+    "Judgment call to sanity-check if desired: 18.3.3-Ք removed rather than retimed to t=2112 (plausibly the closed<=>exact theorem but the chapter list never names closedness; 18.3.2 already links that landing)",
+    "Codex workaround for future sessions: elevated Windows sandbox helper is broken ('setup refresh had errors'); reviews dispatch via codex exec --dangerously-bypass-approvals-and-sandbox with read-only instructions in the prompt; offered a global CLAUDE.md note - owner has not answered",
+]
+
+next = [
+    "Owner should re-open the finals (the viewer may show the pre-fix build) and spot-check v1 p34, p64, p130, p156 and v2 p242",
+    "Possible later: print test of the foot lines, re-fetch channel for new videos",
+]
+
+files = [
+    "opus_4_8_musoyan_qrs/manual_matches.json (7 new overrides, 1 reject, 1 approve removed)",
+    "opus_4_8_musoyan_qrs/videos/matches.json (regenerated)",
+    "opus_4_8_musoyan_qrs/videos/match_report.html (regenerated)",
+    "opus_4_8_musoyan_qrs/video_links.json (regenerated: 355 links)",
+    "opus_4_8_musoyan_qrs/out_pdf/musoyan_1_final.pdf (rebuilt)",
+    "opus_4_8_musoyan_qrs/out_pdf/musoyan_2_final.pdf (rebuilt)",
+]
+
+commits = []
+
+notes = """
+The sweep heuristic: a placeable match whose topic starts with a continuation marker
+(Property N, proof, example, remark, corollary, special case) is suspect; the fix is
+always the start of the containing block in the same video's chapter list, found by
+reading, not scoring. 9.4.4 extended the ch-15/16/19 'no honest video -> no link'
+policy to a subsection for the first time.
+"""

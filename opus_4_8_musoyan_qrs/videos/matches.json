@@ -196,7 +196,7 @@
         "topic": "Հաջորդականության սահման",
         "t": 767,
         "url": "https://youtu.be/Ao7id8AkAnA?t=767",
-        "source": "chapter link: where this chapter opens (Մաթեմատիկական անալիզ 1, Դաս 5, from 2.1. Հաջորդականության սահման p.30); 25 links in the chapter"
+        "source": "chapter link: where this chapter opens (Մաթեմատիկական անալիզ 1, Դաս 5, from 2.1. Հաջորդականության սահման p.30); 23 links in the chapter"
       }
     ],
     "alternates": []
@@ -296,11 +296,11 @@
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
-        "video_title": "Դաս 6 | Սահմանի հատկություններ։ Անվերջ փոքրեր և մեծեր | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Հատկություն 4․ զուգամետ ⇒ սահմանափակ",
-        "t": 1833,
-        "url": "https://youtu.be/tRgEJi9612k?t=1833",
-        "source": "manual: reviewed - scorer picked a neighbouring topic in the right lecture"
+        "video_title": "Դաս 5 | Հաջորդականություններ։ Հաջորդականության սահման | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
+        "topic": "Հատկություն 1․ սահմանը＞p ⇒ x_n＞p (ինչ-որ պահից)",
+        "t": 3411,
+        "url": "https://youtu.be/Ao7id8AkAnA?t=3411",
+        "source": "independent audit 2026-10-21: Property 1 (the general >p form the book opens with) is at the END of L5; L6 t=0 only has the p=0 special case"
       }
     ],
     "alternates": [
@@ -521,15 +521,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 7.58,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
         "video_title": "Դաս 7 | ∞/∞ և 0/0 անորոշություններ։ Ոստիկանների կանոն | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "0/0 տիպի անորոշություն",
-        "t": 2034,
-        "url": "https://youtu.be/_ZQXNsWRSOw?t=2034"
+        "topic": "∞/∞ տիպի անորոշություն",
+        "t": 1698,
+        "url": "https://youtu.be/_ZQXNsWRSOw?t=1698",
+        "source": "audit 2026-10-21 (full semantic pass): was 0/0 (33:54); the indeterminacies block starts at the ∞/∞ topic"
       }
     ],
     "alternates": [
@@ -725,20 +726,7 @@
     "title": "2.2.3. e թվի մոտավոր հաշվումը",
     "page": 44,
     "level": 3,
-    "matches": [
-      {
-        "score": 3.15,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 1",
-        "video_title": "Դաս 13 | Վերջավոր սահմանով ֆունկցիաների հատկություններ | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Էյլերի e թվի ընդհանուր բանաձևը",
-        "t": 0,
-        "url": "https://youtu.be/-NfKMFvJviM?t=0",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": []
   },
   {
@@ -821,15 +809,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 8.49,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
-        "video_title": "Դաս 10 | limsup-ի գոյությունը։ Բոլցանո-Վայերշտրաս։ Կոշիի սկզբունք | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "c-ն մասնակի սահման է",
-        "t": 1672,
-        "url": "https://youtu.be/ztBhB3AZexE?t=1672"
+        "video_title": "Դաս 9 | Ներդրված հատվածներ։ Մասնակի սահման և limsup | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
+        "topic": "Մասնակի սահմաններ",
+        "t": 2365,
+        "url": "https://youtu.be/dXYd4zJ33vo?t=2365",
+        "source": "audit 2026-10-21 (full semantic pass): was a limsup proof step in L10; the partial-limits definition block is L9 39:25"
       }
     ],
     "alternates": [
@@ -988,10 +977,10 @@
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
         "video_title": "Դաս 10 | limsup-ի գոյությունը։ Բոլցանո-Վայերշտրաս։ Կոշիի սկզբունք | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Կոշիի զուգամիտության սկզբունքը",
-        "t": 3628,
-        "url": "https://youtu.be/ztBhB3AZexE?t=3628",
-        "source": "manual: ch.1-6 are single-variable; the linked lecture was the R^m course"
+        "topic": "Ֆունդամենտալ հաջորդականություն",
+        "t": 3437,
+        "url": "https://youtu.be/ztBhB3AZexE?t=3437",
+        "source": "audit 2026-10-21 (full semantic pass): the section opens with the fundamental-sequence definition, one topic earlier"
       }
     ],
     "alternates": [
@@ -1035,10 +1024,10 @@
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
         "video_title": "Դաս 10 | limsup-ի գոյությունը։ Բոլցանո-Վայերշտրաս։ Կոշիի սկզբունք | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Կոշիի զուգամիտության սկզբունքը",
-        "t": 3628,
-        "url": "https://youtu.be/ztBhB3AZexE?t=3628",
-        "source": "manual: ch.1-6 are single-variable; the linked lecture was the R^m course"
+        "topic": "Ֆունդամենտալ հաջորդականություն",
+        "t": 3437,
+        "url": "https://youtu.be/ztBhB3AZexE?t=3437",
+        "source": "audit 2026-10-21 (full semantic pass): same as 2.4 (the dedup keeps one line)"
       }
     ],
     "alternates": [
@@ -1366,16 +1355,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 4.66,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
         "video_title": "Դաս 13 | Վերջավոր սահմանով ֆունկցիաների հատկություններ | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Հատկություն 3․ վերջավոր սահման ⇒ սահմանափակ",
-        "t": 1949,
-        "url": "https://youtu.be/-NfKMFvJviM?t=1949",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Հատկություն 1․ lim f(x)＞p ⇒ f(x)＞p լոկալ",
+        "t": 994,
+        "url": "https://youtu.be/-NfKMFvJviM?t=994",
+        "source": "sweep 2026-10-21 (after reader feedback on 2.1.2): was t=1949 (Property 3); the properties block starts at Property 1"
       },
       {
         "score": 3.37,
@@ -1444,20 +1433,7 @@
     "title": "2.5.9. Կոշիի զուգամիտության սկզբունքը",
     "page": 66,
     "level": 3,
-    "matches": [
-      {
-        "score": 10.0,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 1",
-        "video_title": "Դաս 10 | limsup-ի գոյությունը։ Բոլցանո-Վայերշտրաս։ Կոշիի սկզբունք | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Կոշիի զուգամիտության սկզբունքը",
-        "t": 3628,
-        "url": "https://youtu.be/ztBhB3AZexE?t=3628",
-        "source": "manual: ch.1-6 are single-variable; the linked lecture was the R^m course"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 8.97,
@@ -1825,15 +1801,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.09,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 6 | Անընդհատությունը R^m-ում։ Վեկտորարժեք ֆունկցիա | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (բարդ ֆունկցիայի անընդհատությունը)",
-        "t": 3455,
-        "url": "https://youtu.be/Ns7EUdsWTpA?t=3455"
+        "course": "Մաթեմատիկական անալիզ 1",
+        "video_title": "Դաս 16 | Երեք հիմնական սահմաններ։ Բոլցանո-Կոշիի թեորեմ | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
+        "topic": "Թեորեմ․ համադրույթի անընդհատությունը",
+        "t": 1349,
+        "url": "https://youtu.be/QaLdQd1Yk4s?t=1349",
+        "source": "audit 2026-10-21 (full semantic pass): was the R^m version (Analysis 3); Analysis 1 L16 has the single-variable theorem"
       }
     ],
     "alternates": [
@@ -1909,12 +1886,12 @@
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 7 | Բոլցանո-Կոշիի, Վայերշտրասի, Կանտորի թեորեմները R^m-ում | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (Բոլցանո-Կոշի 2)",
-        "t": 2190,
-        "url": "https://youtu.be/drJBoP-WoBE?t=2190",
-        "source": "manual: section-level link to the start of the lecture that covers it"
+        "course": "Մաթեմատիկական անալիզ 1",
+        "video_title": "Դաս 16 | Երեք հիմնական սահմաններ։ Բոլցանո-Կոշիի թեորեմ | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
+        "topic": "Բոլցանո-Կոշիի առաջին թեորեմը",
+        "t": 2944,
+        "url": "https://youtu.be/QaLdQd1Yk4s?t=2944",
+        "source": "audit 2026-10-21 (full semantic pass): was Bolzano-Cauchy 2 in R^m; Analysis 1 L16 has B-C 1 single-variable, the block start"
       }
     ],
     "alternates": [
@@ -1952,15 +1929,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.12,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 7 | Բոլցանո-Կոշիի, Վայերշտրասի, Կանտորի թեորեմները R^m-ում | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (Բոլցանո-Կոշի 2)",
-        "t": 2190,
-        "url": "https://youtu.be/drJBoP-WoBE?t=2190"
+        "course": "Մաթեմատիկական անալիզ 1",
+        "video_title": "Դաս 16 | Երեք հիմնական սահմաններ։ Բոլցանո-Կոշիի թեորեմ | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
+        "topic": "Բոլցանո-Կոշիի առաջին թեորեմը",
+        "t": 2944,
+        "url": "https://youtu.be/QaLdQd1Yk4s?t=2944",
+        "source": "audit 2026-10-21 (full semantic pass): same as 3.2 (theorems plural -> start at theorem 1, single-variable)"
       }
     ],
     "alternates": [
@@ -2080,14 +2058,15 @@
     "matches": [
       {
         "score": 10.0,
-        "confidence": "high",
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
         "video_title": "Դաս 18 | Հավասարաչափ անընդհատություն | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Հավասարաչափ անընդհատ ⇒ անընդհատ",
-        "t": 718,
-        "url": "https://youtu.be/OIe9ftnUP18?t=718"
+        "topic": "Հավասարաչափ անընդհատ ֆունկցիա",
+        "t": 576,
+        "url": "https://youtu.be/OIe9ftnUP18?t=576",
+        "source": "audit 2026-10-21 (full semantic pass): was the implication (11:58); the section starts at the definition (9:36)"
       },
       {
         "score": 3.77,
@@ -2250,16 +2229,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 3.23,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 7 | Բոլցանո-Կոշիի, Վայերշտրասի, Կանտորի թեորեմները R^m-ում | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (Կանտոր)",
-        "t": 3952,
-        "url": "https://youtu.be/drJBoP-WoBE?t=3952",
-        "source": "manual: reviewed and confirmed"
+        "course": "Մաթեմատիկական անալիզ 1",
+        "video_title": "Դաս 18 | Հավասարաչափ անընդհատություն | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
+        "topic": "Կանտորի թեորեմ․ հատվածում անընդհատ ⇒ հավասարաչափ",
+        "t": 3235,
+        "url": "https://youtu.be/OIe9ftnUP18?t=3235",
+        "source": "independent audit 2026-10-21: the 1-D Cantor theorem exists in A1 L18; was the R^m version"
       }
     ],
     "alternates": []
@@ -2294,7 +2273,7 @@
         "topic": "Ֆունկցիայի ածանցյալի սահմանումը",
         "t": 191,
         "url": "https://youtu.be/cXUxcDOZxY8?t=191",
-        "source": "chapter link: where this chapter opens (Մաթեմատիկական անալիզ 1, Դաս 19, from 4.1. Ածանցյալ p.94); 44 links in the chapter"
+        "source": "chapter link: where this chapter opens (Մաթեմատիկական անալիզ 1, Դաս 19, from 4.1. Ածանցյալ p.94); 43 links in the chapter"
       }
     ],
     "alternates": [
@@ -2447,16 +2426,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 6.98,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
         "video_title": "Դաս 19 | Ածանցյալ։ Ֆունկցիայի աճի բանաձև | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ ածանցման կանոնները",
-        "t": 3697,
-        "url": "https://youtu.be/cXUxcDOZxY8?t=3697",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Որոշ ֆունկցիաների ածանցյալների բանաձևեր",
+        "t": 372,
+        "url": "https://youtu.be/cXUxcDOZxY8?t=372",
+        "source": "audit 2026-10-21 (full semantic pass): was the derivation RULES (61:37, = §4.1.4); the FORMULAS table is at 6:12"
       }
     ],
     "alternates": []
@@ -2701,15 +2680,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 7.57,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 1",
         "video_title": "Դաս 21 | Դիֆերենցիալ։ Բարձր կարգի ածանցյալ։ Լայբնիցի բանաձև | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Դիֆերենցիալի բանաձևը",
-        "t": 482,
-        "url": "https://youtu.be/mS5DMoENeSg?t=482"
+        "topic": "Դիֆերենցելիություն և դիֆերենցելի ֆունկցիա",
+        "t": 0,
+        "url": "https://youtu.be/mS5DMoENeSg?t=0",
+        "source": "audit 2026-10-21 (full semantic pass): was 8:02 mid-block; the differential block starts at t=0 (dedup with 4.2.1)"
       }
     ],
     "alternates": [
@@ -3351,15 +3331,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 7.99,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 4 | Թեյլորի վերլուծություններ։ Ֆունկցիայի ածանցյալի նշանը | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Հիշեցում․ Թեյլորի բանաձև",
+        "video_title": "Դաս 3 | Թեյլորի բազմանդամներ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Բազմանդամի արտահայտումը 0 կետում ածանցյալներով",
         "t": 0,
-        "url": "https://youtu.be/-I293mYN0kY?t=0"
+        "url": "https://youtu.be/3V1f_mO-rtw?t=0",
+        "source": "audit 2026-10-21 (full semantic pass): was a recap topic in L4; the Taylor development starts at L3 t=0"
       }
     ],
     "alternates": [
@@ -3645,10 +3626,10 @@
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
         "video_title": "Դաս 5 | Էքստրեմումներ։ Էքստրեմում գտնելու կանոններ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Լոկալ էքստրեմումի կետեր",
-        "t": 614,
-        "url": "https://youtu.be/bpz1VxfsE9U?t=614",
-        "source": "manual: ch.4 is single-variable; scorer used the multivariable topic"
+        "topic": "Լոկալ մաքսիմումի / մինիմումի կետ",
+        "t": 424,
+        "url": "https://youtu.be/bpz1VxfsE9U?t=424",
+        "source": "audit 2026-10-21 (full semantic pass): was 10:14; the extremum block starts at the local max/min definition (7:04)"
       }
     ],
     "alternates": [
@@ -3732,20 +3713,7 @@
     "title": "4.7.6. Բարձր կարգի ածանցյալների օգտագործումը",
     "page": 126,
     "level": 3,
-    "matches": [
-      {
-        "score": 6.25,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 1",
-        "video_title": "Դաս 21 | Դիֆերենցիալ։ Բարձր կարգի ածանցյալ։ Լայբնիցի բանաձև | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Բարձր կարգի ածանցյալներ",
-        "t": 1842,
-        "url": "https://youtu.be/mS5DMoENeSg?t=1842",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 5.94,
@@ -3875,15 +3843,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 8.55,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
         "video_title": "Դաս 5 | Էքստրեմումներ։ Էքստրեմում գտնելու կանոններ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Օրինակ․ √(x^2+1)-ի ասիմպտոտները",
-        "t": 4020,
-        "url": "https://youtu.be/bpz1VxfsE9U?t=4020"
+        "topic": "Հորիզոնական ասիմպտոտ",
+        "t": 3114,
+        "url": "https://youtu.be/bpz1VxfsE9U?t=3114",
+        "source": "sweep 2026-10-21 (after reader feedback on 2.1.2): was t=4020 (a closing example); the asymptotes block starts here"
       }
     ],
     "alternates": []
@@ -3944,16 +3913,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 5.41,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
         "video_title": "Դաս 6 | Ուռուցիկ և գոգավոր ֆունկցիաներ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ ուռուցիկ/գոգավոր ⇒ անընդհատ",
-        "t": 1120,
-        "url": "https://youtu.be/92YGxX0rSm8?t=1120",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Ուռուցիկ ֆունկցիա",
+        "t": 0,
+        "url": "https://youtu.be/92YGxX0rSm8",
+        "source": "codex semantic pass 2026-10-21: heading includes the definition, whose block opens the lesson; was landing on the continuity theorem mid-lesson"
       }
     ],
     "alternates": [
@@ -3991,16 +3960,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 6.62,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
         "video_title": "Դաս 6 | Ուռուցիկ և գոգավոր ֆունկցիաներ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Ուռուցիկ ֆունկցիա",
-        "t": 0,
-        "url": "https://youtu.be/92YGxX0rSm8?t=0",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Թեորեմ․ ուռուցիկության պայմանը ածանցյալներով",
+        "t": 2942,
+        "url": "https://youtu.be/92YGxX0rSm8?t=2942",
+        "source": "audit 2026-10-21 (full semantic pass): was t=0 (the convex-function definition); L6 49:02 is the derivative criterion, which IS this subsection"
       }
     ],
     "alternates": [
@@ -4490,16 +4459,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 6.04,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
         "video_title": "Դաս 10 | Որոշյալ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ Ռիմանի ինտեգրալի գոյության անհրաժեշտ պայմանը",
-        "t": 1011,
-        "url": "https://youtu.be/uAg4tBMNdmM?t=1011",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Ռիմանի ինտեգրալային գումար",
+        "t": 0,
+        "url": "https://youtu.be/uAg4tBMNdmM?t=0",
+        "source": "audit 2026-10-21 (full semantic pass): was the necessary-condition theorem; the section starts at the Riemann-sum definition"
       },
       {
         "score": 5.45,
@@ -4548,15 +4517,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.1,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 11 | Ինտեգրելիության պայմաններ։ Դարբուի թեորեմ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Ինտեգրելիության անհրաժեշտ և բավարար պայմանը",
-        "t": 0,
-        "url": "https://youtu.be/RJ2G6A0vx7Y?t=0"
+        "video_title": "Դաս 10 | Որոշյալ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Թեորեմ․ Ռիմանի ինտեգրալի գոյության անհրաժեշտ պայմանը",
+        "t": 1011,
+        "url": "https://youtu.be/uAg4tBMNdmM?t=1011",
+        "source": "audit 2026-10-21 (full semantic pass): was swapped with 5.2.4: this one IS the necessary-condition theorem (L10 16:51)"
       },
       {
         "score": 6.07,
@@ -4628,15 +4598,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 8.97,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 15 | Կրկնակի ինտեգրալ։ Ինտեգրելիության պայմաններ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Դարբուի գումարներ",
-        "t": 1391,
-        "url": "https://youtu.be/a_DKZeNVaC0?t=1391"
+        "course": "Մաթեմատիկական անալիզ 2",
+        "video_title": "Դաս 10 | Որոշյալ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Դարբուի վերին և ստորին գումարներ",
+        "t": 1716,
+        "url": "https://youtu.be/uAg4tBMNdmM?t=1716",
+        "source": "audit 2026-10-21 (full semantic pass): was the Analysis 3 double-integral version; L10 28:36 is the single-variable one"
       },
       {
         "score": 7.0,
@@ -4686,15 +4657,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 8.3,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 10 | Որոշյալ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ Ռիմանի ինտեգրալի գոյության անհրաժեշտ պայմանը",
-        "t": 1011,
-        "url": "https://youtu.be/uAg4tBMNdmM?t=1011"
+        "video_title": "Դաս 11 | Ինտեգրելիության պայմաններ։ Դարբուի թեորեմ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Ինտեգրելիության անհրաժեշտ և բավարար պայմանը",
+        "t": 0,
+        "url": "https://youtu.be/RJ2G6A0vx7Y?t=0",
+        "source": "audit 2026-10-21 (full semantic pass): was swapped with 5.2.2: this one is the nec+suff criterion (L11 t=0)"
       }
     ],
     "alternates": [
@@ -4780,27 +4752,28 @@
     "level": 2,
     "matches": [
       {
-        "score": 8.61,
-        "confidence": "high",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 18 | Բազմակի ինտեգրալի հատկություններ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Հատկություն․ 1 ֆունկցիայի ինտեգրալը",
-        "t": 3045,
-        "url": "https://youtu.be/ONyTkl-_Z5s?t=3045"
-      },
-      {
-        "score": 6.64,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Մհեր Մարտիրոսյան",
         "track": "theoretical",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 22 | Լեբեգի թեորեմը։ Բազմակի ինտեգրալի հատկություններ | Մաթեմատիկական անալիզ 3",
-        "topic": "Հատկություն 2․ ինտեգրալը տրոհման բազմություններով",
-        "t": 3170,
-        "url": "https://youtu.be/W6joRefWU4E?t=3170",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Հավասարությամբ արտահայտվող հատկություններ",
+        "t": 2672,
+        "url": "https://youtu.be/W6joRefWU4E?t=2672",
+        "source": "sweep 2026-10-21 (after reader feedback on 2.1.2): was t=3170 (Property 2); the properties block header is at t=2672"
+      },
+      {
+        "score": 10.0,
+        "confidence": "manual",
+        "lecturer": "Կարեն Քեռյան",
+        "track": "applied",
+        "course": "Մաթեմատիկական անալիզ 2",
+        "video_title": "Դաս 13 | Ինտեգրալի հատկությունները | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Հատկություն 1․ ինտեգրալի ադիտիվություն",
+        "t": 0,
+        "url": "https://youtu.be/bnt83GwZZp8?t=0",
+        "source": "independent audit 2026-10-21: Քեռյան HAS a 1-D properties lesson (A2 L13, same title as the section); was the multiple-integral lesson"
       }
     ],
     "alternates": [
@@ -5138,16 +5111,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 5.69,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Փոփոխականի փոխարինում",
-        "t": 1882,
-        "url": "https://youtu.be/ehhIWKtErB4?t=1882",
-        "source": "manual: reviewed and confirmed"
+        "video_title": "Դաս 15 | Փոփոխականի փոխարինում և մասերով ինտեգրում | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Թեորեմ․ փոփոխականի փոխարինումը",
+        "t": 0,
+        "url": "https://youtu.be/5Ju2ajUhWTA?t=0",
+        "source": "independent audit 2026-10-21: A2 L15 carries the section's exact title and proves the DEFINITE-integral theorems; was the indefinite-integral lesson"
       },
       {
         "score": 4.86,
@@ -5207,15 +5180,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.55,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Փոփոխականի փոխարինում",
-        "t": 1882,
-        "url": "https://youtu.be/ehhIWKtErB4?t=1882"
+        "video_title": "Դաս 15 | Փոփոխականի փոխարինում և մասերով ինտեգրում | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Թեորեմ․ փոփոխականի փոխարինումը",
+        "t": 0,
+        "url": "https://youtu.be/5Ju2ajUhWTA?t=0",
+        "source": "independent audit 2026-10-21: definite-integral substitution theorem (dedup with 5.8)"
       },
       {
         "score": 3.82,
@@ -5264,15 +5238,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.55,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Մասերով ինտեգրում",
-        "t": 2895,
-        "url": "https://youtu.be/ehhIWKtErB4?t=2895"
+        "video_title": "Դաս 15 | Փոփոխականի փոխարինում և մասերով ինտեգրում | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Թեորեմ․ մասերով ինտեգրումը",
+        "t": 1504,
+        "url": "https://youtu.be/5Ju2ajUhWTA?t=1504",
+        "source": "independent audit 2026-10-21: definite-integral by-parts theorem; was the indefinite version"
       }
     ],
     "alternates": [
@@ -5342,20 +5317,7 @@
     "title": "5.8.4. Թեյլորի բանաձևի մնացորդային անդամը",
     "page": 167,
     "level": 3,
-    "matches": [
-      {
-        "score": 4.33,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 3 | Թեյլորի բազմանդամներ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Մնացորդային անդամ",
-        "t": 1556,
-        "url": "https://youtu.be/3V1f_mO-rtw?t=1556",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": []
   },
   {
@@ -5452,6 +5414,18 @@
     "level": 3,
     "matches": [
       {
+        "score": 10.0,
+        "confidence": "manual",
+        "lecturer": "Մհեր Մարտիրոսյան",
+        "track": "theoretical",
+        "course": "Մաթեմատիկական անալիզ 3",
+        "video_title": "Դաս 24 | Ֆուբինիի թեորեմը։ Կորագիծ սեղանով կրկնակի ինտեգրալ | Մաթեմատիկական անալիզ 3",
+        "topic": "Կորագիծ սեղանով տարածված ինտեգրալ",
+        "t": 3124,
+        "url": "https://youtu.be/aPk_g7_r_rM?t=3124",
+        "source": "independent audit 2026-10-21: was an 'ա)' sub-step; the curvilinear-trapezoid block starts here"
+      },
+      {
         "score": 9.0,
         "confidence": "high",
         "lecturer": "Կարեն Քեռյան",
@@ -5461,18 +5435,6 @@
         "topic": "Թեորեմ (կորագիծ սեղանի մակերեսը)",
         "t": 1815,
         "url": "https://youtu.be/Z4m1S-_VBMI?t=1815"
-      },
-      {
-        "score": 4.68,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 24 | Ֆուբինիի թեորեմը։ Կորագիծ սեղանով կրկնակի ինտեգրալ | Մաթեմատիկական անալիզ 3",
-        "topic": "ա) Կորագիծ սեղանը J-չափելի է",
-        "t": 3383,
-        "url": "https://youtu.be/aPk_g7_r_rM?t=3383",
-        "source": "manual: reviewed and confirmed"
       }
     ],
     "alternates": [
@@ -5824,15 +5786,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 8.89,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 20 | Կորի երկարության հաշվումը | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ կորի երկարության բանաձևը",
-        "t": 0,
-        "url": "https://youtu.be/a1mxxH_9dAU?t=0"
+        "video_title": "Դաս 19 | Ծավալի արտահատումն ինտեգրալով։ Ուղղելի կորեր | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
+        "topic": "Ուղղելի կոր, կորի երկարություն",
+        "t": 3375,
+        "url": "https://youtu.be/l8lEcM3jIN4?t=3375",
+        "source": "audit 2026-10-21 (full semantic pass): the section opens with rectifiable curves (6.3.1); dedup keeps one line"
       },
       {
         "score": 4.17,
@@ -6082,16 +6045,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 5.39,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 1 | Հաջորդականության սահմանը R^m տարածությունում | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Հաջորդականության սահման",
-        "t": 2381,
-        "url": "https://youtu.be/Y22tmTLMtoM?t=2381",
-        "source": "manual: reviewed and confirmed"
+        "topic": "R^m-ը որպես գծային տարածություն",
+        "t": 0,
+        "url": "https://youtu.be/Y22tmTLMtoM?t=0",
+        "source": "codex review 2026-10-21: the section's block starts at §7.1.1 (R^m as normed linear space) = the lesson's t=0; t=2381 was the best-TITLE-match sub-item (rule #9.1). Equals the ch.7 card target, so the line is skipped as an exact duplicate - honestly"
       }
     ],
     "alternates": [
@@ -6353,10 +6316,10 @@
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 2 | Զուգամիտությունը R^m-ում։ Ֆունկցիայի սահման | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Շատ փոփոխականի ֆունկցիայի սահման",
-        "t": 2643,
-        "url": "https://youtu.be/0wn8nKGemEo?t=2643",
-        "source": "manual: book says 'Մի քանի փոփոխականի', the video 'Շատ փոփոխականի' - same concept"
+        "topic": "Կուտակման կետ R^m-ում",
+        "t": 2125,
+        "url": "https://youtu.be/0wn8nKGemEo?t=2125",
+        "source": "audit 2026-10-21 (full semantic pass): the section opens with the accumulation point (7.2.1, 35:25); dedup keeps one line"
       }
     ],
     "alternates": [
@@ -6522,15 +6485,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.36,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 2 | Զուգամիտությունը R^m-ում։ Ֆունկցիայի սահման | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Կոշիի զուգամիտության սկզբունքը",
-        "t": 964,
-        "url": "https://youtu.be/0wn8nKGemEo?t=964"
+        "video_title": "Դաս 3 | Կոշիի սկզբունքը R^m-ում։ Հաջորդական սահմաններ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Թեորեմ․ Կոշիի զուգամիտության սկզբունքը",
+        "t": 2119,
+        "url": "https://youtu.be/qHVChSUlwSM?t=2119",
+        "source": "audit 2026-10-21 (full semantic pass): was the SEQUENCE Cauchy principle (= 7.1.5); L3 35:19 is the function-limit version"
       },
       {
         "score": 3.77,
@@ -6917,10 +6881,10 @@
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 6 | Անընդհատությունը R^m-ում։ Վեկտորարժեք ֆունկցիա | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Շատ փոփոխականի անընդհատ ֆունկցիա",
-        "t": 0,
-        "url": "https://youtu.be/Ns7EUdsWTpA?t=0",
-        "source": "manual: plain continuity in R^m; scorer reused the UNIFORM-continuity topic for all three"
+        "topic": "Օրինակ 1․ բազմանդամ",
+        "t": 3970,
+        "url": "https://youtu.be/Ns7EUdsWTpA?t=3970",
+        "source": "independent audit 2026-10-21: the same lesson has the actual examples block; was t=0 (the definition, duplicating 7.3's target)"
       },
       {
         "score": 4.22,
@@ -6997,10 +6961,10 @@
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 7 | Բոլցանո-Կոշիի, Վայերշտրասի, Կանտորի թեորեմները R^m-ում | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (Բոլցանո-Կոշի 2)",
-        "t": 2190,
-        "url": "https://youtu.be/drJBoP-WoBE?t=2190",
-        "source": "manual: section-level link to the start of the lecture that covers it"
+        "topic": "Թեորեմ (Բոլցանո-Կոշի 1)",
+        "t": 1039,
+        "url": "https://youtu.be/drJBoP-WoBE?t=1039",
+        "source": "audit 2026-10-21 (full semantic pass): was Bolzano-Cauchy 2; the block starts at B-C 1 (17:19)"
       }
     ],
     "alternates": [
@@ -7038,15 +7002,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.12,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 7 | Բոլցանո-Կոշիի, Վայերշտրասի, Կանտորի թեորեմները R^m-ում | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (Բոլցանո-Կոշի 2)",
-        "t": 2190,
-        "url": "https://youtu.be/drJBoP-WoBE?t=2190"
+        "topic": "Թեորեմ (Բոլցանո-Կոշի 1)",
+        "t": 1039,
+        "url": "https://youtu.be/drJBoP-WoBE?t=1039",
+        "source": "audit 2026-10-21 (full semantic pass): same as 7.4 (dedup keeps one line)"
       }
     ],
     "alternates": [
@@ -7243,18 +7208,6 @@
     "level": 3,
     "matches": [
       {
-        "score": 5.33,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 5 | Կոմպակտ բազմություն R^m-ում։ Բորելի լեմման | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Կոմպակտ բազմություն R^m-ում",
-        "t": 242,
-        "url": "https://youtu.be/LT1Og_DiDpY?t=242",
-        "source": "manual: reviewed and confirmed"
-      },
-      {
         "score": 4.8,
         "confidence": "review",
         "lecturer": "Մհեր Մարտիրոսյան",
@@ -7313,16 +7266,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 5.55,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 5 | Կոմպակտ բազմություն R^m-ում։ Բորելի լեմման | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Կապակցված բազմություն R^m-ում",
-        "t": 0,
-        "url": "https://youtu.be/LT1Og_DiDpY?t=0",
-        "source": "manual: reviewed and confirmed"
+        "video_title": "Դաս 7 | Բոլցանո-Կոշիի, Վայերշտրասի, Կանտորի թեորեմները R^m-ում | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Թեորեմ (Բոլցանո-Կոշի 1)",
+        "t": 1039,
+        "url": "https://youtu.be/drJBoP-WoBE?t=1039",
+        "source": "codex semantic pass 2026-10-21: Bolzano-Cauchy 1 is the scalar continuous-image theorem for connected sets; was landing on the connectedness definition"
       }
     ],
     "alternates": [
@@ -7373,16 +7326,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 5.78,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 12 | Բարձր կարգի ածանցյալ։ Խառն ածանցյալների թեորեմը | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Բարձր կարգի մասնակի ածանցյալներ",
+        "video_title": "Դաս 8 | Ֆունկցիայի մասնակի ածանցյալ։ Լրիվ աճի բանաձևը | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Մասնակի աճ և ածացյալ",
         "t": 0,
-        "url": "https://youtu.be/ZuK6nSzWSoI?t=0",
-        "source": "manual: reviewed and confirmed"
+        "url": "https://youtu.be/ZbFpr2_yW-o?t=0",
+        "source": "codex review 2026-10-21: was Դաս 12 (HIGHER-order partials = §8.2.1's material, see the ch.8 card note); first partials/differential is Դաս 8 t=0, same as the ch.8 card - skipped as exact duplicate"
       }
     ],
     "alternates": [
@@ -7420,15 +7373,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 7.92,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 12 | Բարձր կարգի ածանցյալ։ Խառն ածանցյալների թեորեմը | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Բարձր կարգի մասնակի ածանցյալներ",
+        "video_title": "Դաս 8 | Ֆունկցիայի մասնակի ածանցյալ։ Լրիվ աճի բանաձևը | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Մասնակի աճ և ածացյալ",
         "t": 0,
-        "url": "https://youtu.be/ZuK6nSzWSoI?t=0"
+        "url": "https://youtu.be/ZbFpr2_yW-o?t=0",
+        "source": "codex review 2026-10-21: same as 8.1: the scorer matched 'Մասնակի ածանցյալները' to Դաս 12's higher-order topic; the honest lesson is Դաս 8 t=0 = the ch.8 card"
       }
     ],
     "alternates": [
@@ -7559,15 +7513,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.19,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 1",
-        "video_title": "Դաս 21 | Դիֆերենցիալ։ Բարձր կարգի ածանցյալ։ Լայբնիցի բանաձև | Մաթեմատիկական անալիզ 1 (ԿՎՏԳ)",
-        "topic": "Դիֆերենցիալի երկրաչափական իմաստը",
-        "t": 850,
-        "url": "https://youtu.be/mS5DMoENeSg?t=850"
+        "course": "Մաթեմատիկական անալիզ 3",
+        "video_title": "Դաս 10 | Դիֆերենցիալի երկրաչափական իմաստը։ Շղթայի կանոն | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Շոշափող հարթություն",
+        "t": 0,
+        "url": "https://youtu.be/XKrbBB5gwkk",
+        "source": "codex semantic pass 2026-10-21: ch.8 is multivariable - the tangent-plane block is the geometric meaning of the differential there; was the 1-D lesson of the same name"
       }
     ],
     "alternates": [
@@ -7996,15 +7951,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.72,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 3 | Թեյլորի բազմանդամներ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Մնացորդային անդամը Լագրանժի տեսքով",
-        "t": 3896,
-        "url": "https://youtu.be/3V1f_mO-rtw?t=3896"
+        "course": "Մաթեմատիկական անալիզ 3",
+        "video_title": "Դաս 13 | Շատ փոփոխականի ֆունկցիայի էքստրեմումներ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Թեյլորի բանաձևը բազմաչափ դեպքում",
+        "t": 1051,
+        "url": "https://youtu.be/kVZFl2X0bVE?t=1051",
+        "source": "independent audit 2026-10-21: chapter 8 is multivariable and the multivar Taylor block states the Lagrange-form remainder; was the 1-D lesson (dedup with 8.3)"
       }
     ],
     "alternates": []
@@ -8386,17 +8342,6 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.64,
-        "confidence": "high",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 13 | Անիսկական ինտեգրալի զուգամիտությունը | Մաթեմատիկական անալիզ 3",
-        "topic": "Կոշիի զուգամիտության սկզբունքը",
-        "t": 0,
-        "url": "https://youtu.be/2OAWeagFM1M?t=0"
-      },
-      {
         "score": 8.4,
         "confidence": "high",
         "lecturer": "Կարեն Քեռյան",
@@ -8474,18 +8419,6 @@
         "topic": "Դրական շարքեր",
         "t": 0,
         "url": "https://youtu.be/kYQlkcaPhy0?t=0"
-      },
-      {
-        "score": 4.85,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 9 | ՊԿԱԻ-ի ածանցումը։ Դիրիխլեի ինտեգրալը | Մաթեմատիկական անալիզ 4",
-        "topic": "Դրական շարքերի ինտեգրումը",
-        "t": 844,
-        "url": "https://youtu.be/EjaAfde_jYU?t=844",
-        "source": "manual: reviewed and confirmed"
       }
     ],
     "alternates": [
@@ -8602,27 +8535,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 8.53,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 4 | Դրական շարքեր։ Բաղդատման հայտանիշներ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Բաղդատման երկրորդ հայտանիշ",
-        "t": 3331,
-        "url": "https://youtu.be/kYQlkcaPhy0?t=3331"
-      },
-      {
-        "score": 5.04,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 14 | Անսահմանափակ ֆունկցիայի անիսկական ինտեգրալ | Մաթեմատիկական անալիզ 3",
-        "topic": "Բաղդատման հայտանիշների հետևանքներ",
-        "t": 1893,
-        "url": "https://youtu.be/zP0rdJaUqlg?t=1893",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Բաղդատման առաջին հայտանիշ",
+        "t": 2877,
+        "url": "https://youtu.be/kYQlkcaPhy0?t=2877",
+        "source": "audit 2026-10-21 (full semantic pass): was the SECOND comparison criterion (55:31); the first is at 47:57"
       }
     ],
     "alternates": [
@@ -8774,15 +8696,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 8.61,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 5 | Կոշիի և Դալամբերի հայտանիշները | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Դալամբերի հայտանիշը",
-        "t": 3708,
-        "url": "https://youtu.be/PdfharOkbr0?t=3708"
+        "topic": "Կոշիի հայտանիշը",
+        "t": 2219,
+        "url": "https://youtu.be/PdfharOkbr0?t=2219",
+        "source": "audit 2026-10-21 (full semantic pass): was d'Alembert (61:48); Cauchy's criterion, named first, is at 36:59"
       }
     ],
     "alternates": [
@@ -8909,32 +8832,7 @@
     "title": "9.2.9. Աբել–Դինիի թեորեմները",
     "page": 280,
     "level": 3,
-    "matches": [
-      {
-        "score": 5.98,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 16 | Ֆուրիեի շարքի զուգամիտության հայտանիշներ | Մաթեմատիկական անալիզ 3",
-        "topic": "Թեորեմ 1․ Դինիի հայտանիշը",
-        "t": 2948,
-        "url": "https://youtu.be/i_sZM09OF5w?t=2948",
-        "source": "manual: reviewed and confirmed"
-      },
-      {
-        "score": 5.98,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 19 | Ֆուրիեի շարքի զուգամիտության հայտանիշներ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ Դինիի հայտանիշ",
-        "t": 675,
-        "url": "https://youtu.be/uhb-j7HCnzc?t=675",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 5.34,
@@ -9094,26 +8992,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.75,
-        "confidence": "high",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 13 | Անիսկական ինտեգրալի զուգամիտությունը | Մաթեմատիկական անալիզ 3",
-        "topic": "Բացարձակ և պայմանական զուգամիտություն",
-        "t": 2475,
-        "url": "https://youtu.be/2OAWeagFM1M?t=2475"
-      },
-      {
-        "score": 9.46,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 15 | Անսահմանափակ ֆունկցիայի անիսկական ինտեգրալ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Բացարձակ և պայմանական զուգամիտություն",
-        "t": 1520,
-        "url": "https://youtu.be/PA4PqctqpH4?t=1520"
+        "video_title": "Դաս 6 | Կոշիի ինտեգրալային հայտանիշ։ Նշանափոխ շարք | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
+        "topic": "Բացարձակ և պայմանական զուգամետ շարքեր",
+        "t": 3877,
+        "url": "https://youtu.be/i8HThZl5slk?t=3877",
+        "source": "audit 2026-10-21 (full semantic pass): was the IMPROPER-INTEGRAL version; L6 64:37 is the series version, exact"
       }
     ],
     "alternates": [
@@ -9162,16 +9050,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 5.72,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 7 | Աստիճանային շարքի զուգամիտությունը | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Դալամբերի հայտանիշն ընդհանուր դեպքում",
-        "t": 1753,
-        "url": "https://youtu.be/2ULf-I-1IHU?t=1753",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Կոշիի հայտանիշն ընդհանուր դեպքում",
+        "t": 801,
+        "url": "https://youtu.be/2ULf-I-1IHU?t=801",
+        "source": "audit 2026-10-21 (full semantic pass): was the general d'Alembert (29:13); the block starts at the general Cauchy (13:21)"
       }
     ],
     "alternates": [
@@ -9196,19 +9084,7 @@
     "title": "9.3.4. Աբել և Դիրիխլեի հայտանիշները",
     "page": 286,
     "level": 3,
-    "matches": [
-      {
-        "score": 9.57,
-        "confidence": "high",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 13 | Անիսկական ինտեգրալի զուգամիտությունը | Մաթեմատիկական անալիզ 3",
-        "topic": "Աբելի և Դիրիխլեի հայտանիշները",
-        "t": 472,
-        "url": "https://youtu.be/2OAWeagFM1M?t=472"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 8.3,
@@ -9367,20 +9243,7 @@
     "title": "9.4.4. Շարքերի Կոշիի արտադրյալը",
     "page": 295,
     "level": 3,
-    "matches": [
-      {
-        "score": 6.85,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 5 | Կոշիի և Դալամբերի հայտանիշները | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Օրինակ 2․ արտադրյալներից կազմված շարք",
-        "t": 4185,
-        "url": "https://youtu.be/PdfharOkbr0?t=4185",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 4.79,
@@ -9721,26 +9584,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.75,
-        "confidence": "high",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 13 | Անիսկական ինտեգրալի զուգամիտությունը | Մաթեմատիկական անալիզ 3",
-        "topic": "Բացարձակ և պայմանական զուգամիտություն",
-        "t": 2475,
-        "url": "https://youtu.be/2OAWeagFM1M?t=2475"
-      },
-      {
-        "score": 9.46,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 15 | Անսահմանափակ ֆունկցիայի անիսկական ինտեգրալ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Բացարձակ և պայմանական զուգամիտություն",
-        "t": 1520,
-        "url": "https://youtu.be/PA4PqctqpH4?t=1520"
+        "video_title": "Դաս 10 | Ֆունկցիոնալ շարքեր և հաջորդականություններ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
+        "topic": "Π (1+a_n) զուգամետ ⇔ ∑ a_n զուգամետ",
+        "t": 711,
+        "url": "https://youtu.be/LxRMQf0jkEE?t=711",
+        "source": "audit 2026-10-21 (full semantic pass): was the IMPROPER-INTEGRAL version; L10's product criterion Π(1+a_n) ⇔ Σa_n is the honest product-convergence content"
       }
     ],
     "alternates": [
@@ -10127,6 +9980,18 @@
     "level": 3,
     "matches": [
       {
+        "score": 10.0,
+        "confidence": "manual",
+        "lecturer": "Կարեն Քեռյան",
+        "track": "applied",
+        "course": "Մաթեմատիկական անալիզ 4",
+        "video_title": "Դաս 10 | Ֆունկցիոնալ շարքեր և հաջորդականություններ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
+        "topic": "Կոշիի սկզբունքը ֆունկցիոնալ հաջորդականության համար",
+        "t": 3746,
+        "url": "https://youtu.be/LxRMQf0jkEE?t=3746",
+        "source": "audit 2026-10-21 (full semantic pass): was the NUMBER-series Cauchy principle; L10 62:26 is the functional-sequence version"
+      },
+      {
         "score": 9.34,
         "confidence": "high",
         "lecturer": "Մհեր Մարտիրոսյան",
@@ -10136,18 +10001,6 @@
         "topic": "Ընդհանուր հավասարաչափ զուգամիտության Կոշիի սկզբունքը",
         "t": 3140,
         "url": "https://youtu.be/rRJYD0xDXGY?t=3140"
-      },
-      {
-        "score": 6.6,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 3 | Թվային շարքի գումարը և զուգամիտությունը | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Կոշիի զուգամիտության սկզբունքը շարքերի համար",
-        "t": 3786,
-        "url": "https://youtu.be/aNJUrY9ylxU?t=3786",
-        "source": "manual: reviewed and confirmed"
       }
     ],
     "alternates": [
@@ -10760,26 +10613,28 @@
     "level": 3,
     "matches": [
       {
-        "score": 8.38,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Մհեր Մարտիրոսյան",
         "track": "theoretical",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 11 | Աստիճանային շարքեր։ Աբելի թեորեմները | Մաթեմատիկական անալիզ 3",
-        "topic": "Թեորեմ 2․ Աբելի երկրորդ թեորեմը",
-        "t": 330,
-        "url": "https://youtu.be/PyL9O4pqIV8?t=330"
+        "topic": "Թեորեմ 1․ Աբելի առաջին թեորեմը",
+        "t": 202,
+        "url": "https://youtu.be/PyL9O4pqIV8?t=202",
+        "source": "audit 2026-10-21 (full semantic pass): was Abel's second theorem (5:30); the first is at 3:22"
       },
       {
-        "score": 8.03,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 13 | Աստիճանային շարքի ինտեգրում և ածանցում | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Աբելի երկրորդ թեորեմ",
-        "t": 1304,
-        "url": "https://youtu.be/VPQIZqKIyPk?t=1304"
+        "topic": "Աբելի առաջին թեորեմ, Աբելի լեմմա",
+        "t": 0,
+        "url": "https://youtu.be/VPQIZqKIyPk?t=0",
+        "source": "audit 2026-10-21 (full semantic pass): was Abel's second theorem (21:44); L13 opens with Abel's first theorem + lemma"
       }
     ],
     "alternates": [
@@ -11287,6 +11142,18 @@
     "level": 3,
     "matches": [
       {
+        "score": 10.0,
+        "confidence": "manual",
+        "lecturer": "Կարեն Քեռյան",
+        "track": "applied",
+        "course": "Մաթեմատիկական անալիզ 4",
+        "video_title": "Դաս 14 | Անվերջ սահմաններով անիսկական ինտեգրալ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
+        "topic": "Զուգամետ ինտեգրալի պոչը զուգամետ է",
+        "t": 2523,
+        "url": "https://youtu.be/1dgX09N2ZSc?t=2523",
+        "source": "independent audit 2026-10-21: Քեռյան's own improper lesson has the properties block (tail/scalar/sum); was an intro recap in another lesson"
+      },
+      {
         "score": 7.47,
         "confidence": "high",
         "lecturer": "Մհեր Մարտիրոսյան",
@@ -11296,18 +11163,6 @@
         "topic": "Պարզագույն հատկություններ",
         "t": 1163,
         "url": "https://youtu.be/lDxky2cvIz4?t=1163"
-      },
-      {
-        "score": 4.19,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 6 | Կոշիի ինտեգրալային հայտանիշ։ Նշանափոխ շարք | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Անիսկական ինտեգրալներ",
-        "t": 0,
-        "url": "https://youtu.be/i8HThZl5slk?t=0",
-        "source": "manual: reviewed and confirmed"
       }
     ],
     "alternates": [
@@ -11752,16 +11607,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 5.69,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Փոփոխականի փոխարինում",
-        "t": 1882,
-        "url": "https://youtu.be/ehhIWKtErB4?t=1882",
-        "source": "manual: reviewed and confirmed"
+        "course": "Մաթեմատիկական անալիզ 4",
+        "video_title": "Դաս 16 | Էյլերի բետա և գամմա ինտեգրալներ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
+        "topic": "Մասերով ինտեգրում անիսկական ինտեգրալում",
+        "t": 1387,
+        "url": "https://youtu.be/sR8ZU95WiNs?t=1387",
+        "source": "codex semantic pass 2026-10-21: ch.11 is improper integrals and the lecturer has the improper-integral methods block; was the definite-integral lesson (reopens part of the 11.3 call in DECISIONS #10)"
       },
       {
         "score": 5.12,
@@ -11833,15 +11688,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.55,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Մասերով ինտեգրում",
-        "t": 2895,
-        "url": "https://youtu.be/ehhIWKtErB4?t=2895"
+        "course": "Մաթեմատիկական անալիզ 4",
+        "video_title": "Դաս 16 | Էյլերի բետա և գամմա ինտեգրալներ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
+        "topic": "Մասերով ինտեգրում անիսկական ինտեգրալում",
+        "t": 1387,
+        "url": "https://youtu.be/sR8ZU95WiNs?t=1387",
+        "source": "codex semantic pass 2026-10-21: improper-integral by-parts theorem; was the definite-integral by-parts"
       },
       {
         "score": 8.63,
@@ -11901,15 +11757,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 9.55,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Փոփոխականի փոխարինում",
-        "t": 1882,
-        "url": "https://youtu.be/ehhIWKtErB4?t=1882"
+        "course": "Մաթեմատիկական անալիզ 4",
+        "video_title": "Դաս 16 | Էյլերի բետա և գամմա ինտեգրալներ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
+        "topic": "Փոփոխականի փոխարինում անիսկական ինտեգրալում",
+        "t": 2277,
+        "url": "https://youtu.be/sR8ZU95WiNs?t=2277",
+        "source": "codex semantic pass 2026-10-21: improper-integral substitution theorem; was the definite-integral substitution"
       },
       {
         "score": 7.64,
@@ -12005,15 +11862,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 8.84,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Մհեր Մարտիրոսյան",
         "track": "theoretical",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 4 | Ընդհանուր հավասարաչափ զուգամիտություն | Մաթեմատիկական անալիզ 4",
-        "topic": "Ընդհանուր հավասարաչափ զուգամիտության Կոշիի սկզբունքը",
-        "t": 3140,
-        "url": "https://youtu.be/rRJYD0xDXGY?t=3140"
+        "topic": "Հավասարաչափ զուգամիտության Կոշիի սահմանումը",
+        "t": 1994,
+        "url": "https://youtu.be/rRJYD0xDXGY?t=1994",
+        "source": "codex review 2026-10-21: t=3140 is §12.1.2's topic (printed p61); the section's block starts at §12.1.1's definition t=1994 = the ch.12 card - skipped as exact duplicate"
       }
     ],
     "alternates": [
@@ -12161,18 +12019,6 @@
         "topic": "Ընդհանուր հավասարաչափ զուգամիտության Կոշիի սկզբունքը",
         "t": 3140,
         "url": "https://youtu.be/rRJYD0xDXGY?t=3140"
-      },
-      {
-        "score": 5.17,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 3 | Կոշիի սկզբունքը R^m-ում։ Հաջորդական սահմաններ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ Կոշիի զուգամիտության սկզբունքը",
-        "t": 2119,
-        "url": "https://youtu.be/qHVChSUlwSM?t=2119",
-        "source": "manual: reviewed and confirmed"
       }
     ],
     "alternates": [
@@ -12824,20 +12670,7 @@
     "title": "12.3.4. ՊԿԱԻ-ի բերումը ֆունկցիոնալ հաջորդականության կամ շարքի",
     "page": 76,
     "level": 3,
-    "matches": [
-      {
-        "score": 3.87,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 10 | Ֆունկցիոնալ շարքեր և հաջորդականություններ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Ֆունկցիոնալ հաջորդականություն ↔ շարք",
-        "t": 3457,
-        "url": "https://youtu.be/LxRMQf0jkEE?t=3457",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": []
   },
   {
@@ -13458,16 +13291,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 6.56,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Մհեր Մարտիրոսյան",
         "track": "theoretical",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 1 | Վերջավոր վարիացիա։ BV[a, b] դասի կառուցվածքը | Մաթեմատիկական անալիզ 4",
-        "topic": "Օրինակ 2․ անընդհատ, անվերջ վարիացիայի ֆունկցիա",
-        "t": 1020,
-        "url": "https://youtu.be/EoBlM2XuVG4?t=1020",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Վարիացիոն գումար և վարիացիա",
+        "t": 0,
+        "url": "https://youtu.be/EoBlM2XuVG4?t=0",
+        "source": "sweep 2026-10-21 (after reader feedback on 2.1.2): was t=1020 (Example 2); the section starts at t=0. Currently unshipped (chapter-card page) - fixed for data hygiene"
       },
       {
         "score": 3.64,
@@ -13826,16 +13659,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 5.97,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Մհեր Մարտիրոսյան",
         "track": "theoretical",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 3 | Ստիլտեսի ինտեգրալի հատկություններ և գոյություն | Մաթեմատիկական անալիզ 4",
-        "topic": "Պարզագույն հատկությունները",
-        "t": 495,
-        "url": "https://youtu.be/HX0n41UIehI?t=495",
-        "source": "manual: reviewed and confirmed"
+        "topic": "Ստիլտեսի ինտեգրալ",
+        "t": 0,
+        "url": "https://youtu.be/HX0n41UIehI",
+        "source": "codex semantic pass 2026-10-21: heading includes the definition, whose block opens the lesson; was landing on the properties"
       }
     ],
     "alternates": [
@@ -13861,17 +13694,6 @@
     "page": 111,
     "level": 3,
     "matches": [
-      {
-        "score": 8.6,
-        "confidence": "high",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Մասերով ինտեգրում",
-        "t": 2895,
-        "url": "https://youtu.be/ehhIWKtErB4?t=2895"
-      },
       {
         "score": 8.18,
         "confidence": "high",
@@ -14000,18 +13822,6 @@
     "level": 3,
     "matches": [
       {
-        "score": 4.37,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 3 | Ստիլտեսի ինտեգրալի հատկություններ և գոյություն | Մաթեմատիկական անալիզ 4",
-        "topic": "Ստիլտեսի ինտեգրալ",
-        "t": 0,
-        "url": "https://youtu.be/HX0n41UIehI?t=0",
-        "source": "manual: reviewed and confirmed"
-      },
-      {
         "score": 3.46,
         "confidence": "review",
         "lecturer": "Կարեն Քեռյան",
@@ -14056,20 +13866,7 @@
     "title": "13.2.7. Միջին արժեքի թեորեմները",
     "page": 118,
     "level": 3,
-    "matches": [
-      {
-        "score": 7.0,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 14 | Միջին արժեքի թեորեմ։ Նյուտոն-Լայբնիցի բանաձևը | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Միջին արժեքի թեորեմը",
-        "t": 0,
-        "url": "https://youtu.be/6bVCxlyvgEk?t=0",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 3.0,
@@ -14092,19 +13889,7 @@
     "title": "13.2.8. Փոփոխականի փոխարինում",
     "page": 119,
     "level": 3,
-    "matches": [
-      {
-        "score": 8.6,
-        "confidence": "high",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 9 | Անորոշ ինտեգրալ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Փոփոխականի փոխարինում",
-        "t": 1882,
-        "url": "https://youtu.be/ehhIWKtErB4?t=1882"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 5.95,
@@ -15360,32 +15145,7 @@
     "title": "14.5.8. Ֆուրիեի շարքի անդամ առ անդամ ինտեգրումը",
     "page": 168,
     "level": 3,
-    "matches": [
-      {
-        "score": 10.0,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 10 | Ֆունկցիոնալ շարքի ինտեգրում և ածանցում | Մաթեմատիկական անալիզ 3",
-        "topic": "Թեորեմ 4. անդամ առ անդամ ինտեգրում",
-        "t": 0,
-        "url": "https://youtu.be/CIXFmB3sJmA?t=0",
-        "source": "manual: term-by-term integration applies to Fourier series too"
-      },
-      {
-        "score": 10.0,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 12 | Ֆունկցիոնալ շարքի ինտեգրում և ածանցում | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ անդամ առ անդամ ինտեգրում",
-        "t": 2087,
-        "url": "https://youtu.be/P9HwUHIFCEA?t=2087",
-        "source": "manual: same theorem from the other lecturer"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 5.22,
@@ -15564,32 +15324,7 @@
     "title": "14.6.3. Ֆուրիեի շարքի անդամ առ անդամ ածանցումը",
     "page": 174,
     "level": 3,
-    "matches": [
-      {
-        "score": 10.0,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 10 | Ֆունկցիոնալ շարքի ինտեգրում և ածանցում | Մաթեմատիկական անալիզ 3",
-        "topic": "Թեորեմ 5. անդամ առ անդամ ածանցում",
-        "t": 1530,
-        "url": "https://youtu.be/CIXFmB3sJmA?t=1530",
-        "source": "manual: term-by-term differentiation, which does exist"
-      },
-      {
-        "score": 10.0,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 12 | Ֆունկցիոնալ շարքի ինտեգրում և ածանցում | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ անդամ առ անդամ դիֆերենցում",
-        "t": 3385,
-        "url": "https://youtu.be/P9HwUHIFCEA?t=3385",
-        "source": "manual: same theorem from the other lecturer"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 5.06,
@@ -15712,30 +15447,7 @@
     "title": "14.7.2. Դինիի հայտանիշը",
     "page": 175,
     "level": 3,
-    "matches": [
-      {
-        "score": 9.04,
-        "confidence": "high",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 16 | Ֆուրիեի շարքի զուգամիտության հայտանիշներ | Մաթեմատիկական անալիզ 3",
-        "topic": "Թեորեմ 1․ Դինիի հայտանիշը",
-        "t": 2948,
-        "url": "https://youtu.be/i_sZM09OF5w?t=2948"
-      },
-      {
-        "score": 9.04,
-        "confidence": "high",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 19 | Ֆուրիեի շարքի զուգամիտության հայտանիշներ | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ Դինիի հայտանիշ",
-        "t": 675,
-        "url": "https://youtu.be/uhb-j7HCnzc?t=675"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 6.72,
@@ -15791,31 +15503,7 @@
     "title": "14.7.3. Միայն ըստ կոսինուսների (սինուսների) վերլուծություններ",
     "page": 178,
     "level": 3,
-    "matches": [
-      {
-        "score": 5.04,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 17 | Ոչ պարբերական ֆունկցիայի Ֆուրիեի շարք | Մաթեմատիկական անալիզ 3",
-        "topic": "Միայն ըստ sin-ի/cos-ի վերլուծության մասին",
-        "t": 3373,
-        "url": "https://youtu.be/_BULOtAxV0E?t=3373",
-        "source": "manual: reviewed and confirmed"
-      },
-      {
-        "score": 4.37,
-        "confidence": "review",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 4 | Թեյլորի վերլուծություններ։ Ֆունկցիայի ածանցյալի նշանը | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Սինուսի վերլուծությունը՝ sin(x)",
-        "t": 292,
-        "url": "https://youtu.be/-I293mYN0kY?t=292"
-      }
-    ],
+    "matches": [],
     "alternates": []
   },
   {
@@ -15938,20 +15626,7 @@
     "title": "15.2. Սթոուն–Վայերշտրասի թեորեմը",
     "page": 189,
     "level": 2,
-    "matches": [
-      {
-        "score": 4.04,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 19 | Վայերշտրասի թեորեմները։ Զուգահեռանիստի տրոհումներ | Մաթեմատիկական անալիզ 3",
-        "topic": "Բազմանդամներով մոտարկման Վայերշտրասի թեորեմներ",
-        "t": 580,
-        "url": "https://youtu.be/QYsht0qLmXc?t=580",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": []
   },
   {
@@ -16019,20 +15694,7 @@
     "title": "15.2.4. Սթոուն–Վայերշտրասի թեորեմի ապացույցը",
     "page": 194,
     "level": 3,
-    "matches": [
-      {
-        "score": 4.04,
-        "confidence": "manual",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 19 | Վայերշտրասի թեորեմները։ Զուգահեռանիստի տրոհումներ | Մաթեմատիկական անալիզ 3",
-        "topic": "Բազմանդամներով մոտարկման Վայերշտրասի թեորեմներ",
-        "t": 580,
-        "url": "https://youtu.be/QYsht0qLmXc?t=580",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": []
   },
   {
@@ -16110,20 +15772,7 @@
     "title": "16.1. Գծային ձևափոխություններ",
     "page": 200,
     "level": 2,
-    "matches": [
-      {
-        "score": 4.19,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 9 | Դիֆերենցելի ֆունկցիա և դիֆերենցիալ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Դիֆերենցիալը գծային օպերատոր է",
-        "t": 4091,
-        "url": "https://youtu.be/eW8R3t6NSkQ?t=4091",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 3.7,
@@ -16225,19 +15874,7 @@
     "title": "16.2.1. Դիֆերենցելիություն և դիֆերենցիալ",
     "page": 205,
     "level": 3,
-    "matches": [
-      {
-        "score": 9.52,
-        "confidence": "high",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 9 | Դիֆերենցելի ֆունկցիա և դիֆերենցիալ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Դիֆերենցելիություն և դիֆերենցիալ",
-        "t": 1999,
-        "url": "https://youtu.be/eW8R3t6NSkQ?t=1999"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 5.42,
@@ -16406,19 +16043,7 @@
     "title": "16.4.2. Անհրաժեշտ պայմաններ",
     "page": 221,
     "level": 3,
-    "matches": [
-      {
-        "score": 7.38,
-        "confidence": "high",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 5 | Էքստրեմումներ։ Էքստրեմում գտնելու կանոններ | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ էքստրեմումի անհրաժեշտ պայմանը",
-        "t": 751,
-        "url": "https://youtu.be/bpz1VxfsE9U?t=751"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 6.1,
@@ -16825,6 +16450,18 @@
     "level": 3,
     "matches": [
       {
+        "score": 10.0,
+        "confidence": "manual",
+        "lecturer": "Մհեր Մարտիրոսյան",
+        "track": "theoretical",
+        "course": "Մաթեմատիկական անալիզ 3",
+        "video_title": "Դաս 21 | Ֆունկցիայի տատանում։ Զրո չափի բազմություններ | Մաթեմատիկական անալիզ 3",
+        "topic": "Զրո չափի բազմություն",
+        "t": 2219,
+        "url": "https://youtu.be/XJr0bic9cPg?t=2219",
+        "source": "codex semantic pass 2026-10-21: heading covers zero measure AND zero volume; the measure-zero block starts first"
+      },
+      {
         "score": 8.6,
         "confidence": "high",
         "lecturer": "Կարեն Քեռյան",
@@ -16834,17 +16471,6 @@
         "topic": "Զրո չափի բազմություն",
         "t": 1880,
         "url": "https://youtu.be/xB283QhKg2Y?t=1880"
-      },
-      {
-        "score": 8.14,
-        "confidence": "high",
-        "lecturer": "Մհեր Մարտիրոսյան",
-        "track": "theoretical",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 21 | Ֆունկցիայի տատանում։ Զրո չափի բազմություններ | Մաթեմատիկական անալիզ 3",
-        "topic": "Զրո ծավալի բազմություն",
-        "t": 2916,
-        "url": "https://youtu.be/XJr0bic9cPg?t=2916"
       }
     ],
     "alternates": [
@@ -16939,15 +16565,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 7.75,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 18 | Բազմակի ինտեգրալի հատկություններ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Հատկություն․ 1 ֆունկցիայի ինտեգրալը",
-        "t": 3045,
-        "url": "https://youtu.be/ONyTkl-_Z5s?t=3045"
+        "topic": "Թեորեմ․ f±g, cf, |f|, fg ∈ ℜ(A), եթե f,g∈ℜ(A)",
+        "t": 400,
+        "url": "https://youtu.be/ONyTkl-_Z5s?t=400",
+        "source": "sweep 2026-10-21 (after reader feedback on 2.1.2): was t=3045 (a mid-list property); the properties start at this theorem"
       },
       {
         "score": 6.75,
@@ -17042,6 +16669,18 @@
     "level": 3,
     "matches": [
       {
+        "score": 10.0,
+        "confidence": "manual",
+        "lecturer": "Կարեն Քեռյան",
+        "track": "applied",
+        "course": "Մաթեմատիկական անալիզ 3",
+        "video_title": "Դաս 18 | Բազմակի ինտեգրալի հատկություններ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Հատկություն․ f ≥ 0 ⇒ ∫f ≥ 0",
+        "t": 3598,
+        "url": "https://youtu.be/ONyTkl-_Z5s?t=3598",
+        "source": "independent audit 2026-10-21: the multi-D lesson has its own inequality block; was the 1-D lesson"
+      },
+      {
         "score": 5.29,
         "confidence": "manual",
         "lecturer": "Մհեր Մարտիրոսյան",
@@ -17051,18 +16690,6 @@
         "topic": "Անհավասարությամբ արտահայտվող հատկություններ",
         "t": 3826,
         "url": "https://youtu.be/W6joRefWU4E?t=3826",
-        "source": "manual: reviewed and confirmed"
-      },
-      {
-        "score": 4.21,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 13 | Ինտեգրալի հատկությունները | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Անհավասարությամբ արտահայտվող հատկություններ",
-        "t": 3357,
-        "url": "https://youtu.be/bnt83GwZZp8?t=3357",
         "source": "manual: reviewed and confirmed"
       }
     ],
@@ -17090,16 +16717,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 5.6,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 14 | Միջին արժեքի թեորեմ։ Նյուտոն-Լայբնիցի բանաձևը | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Միջին արժեքի թեորեմը",
-        "t": 0,
-        "url": "https://youtu.be/6bVCxlyvgEk?t=0",
-        "source": "manual: reviewed and confirmed"
+        "course": "Մաթեմատիկական անալիզ 3",
+        "video_title": "Դաս 18 | Բազմակի ինտեգրալի հատկություններ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Հատկություն․ m≤f≤M ⇒ mV(A) ≤ ∫f ≤ MV(A)",
+        "t": 4023,
+        "url": "https://youtu.be/ONyTkl-_Z5s?t=4023",
+        "source": "independent audit 2026-10-21: the multi-D integral estimate m≤f≤M is the honest multi-D mean-value content; was the 1-D theorem"
       },
       {
         "score": 3.54,
@@ -17173,14 +16800,15 @@
     "matches": [
       {
         "score": 10.0,
-        "confidence": "high",
+        "confidence": "manual",
         "lecturer": "Մհեր Մարտիրոսյան",
         "track": "theoretical",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 23 | J-չափելի բազմությամբ տարածված ինտեգրալ | Մաթեմատիկական անալիզ 3",
-        "topic": "J-չափելի բազմությամբ տարածված ինտեգրալ",
-        "t": 3279,
-        "url": "https://youtu.be/5v_E8WnfsWk?t=3279"
+        "topic": "Ժորդանի իմաստով չափելի (J-չափելի) բազմություն",
+        "t": 2152,
+        "url": "https://youtu.be/5v_E8WnfsWk?t=2152",
+        "source": "audit 2026-10-21 (full semantic pass): the section opens with J-measurable sets (17.5.1, 35:52); dedup keeps one line"
       },
       {
         "score": 5.8,
@@ -17560,20 +17188,7 @@
     "title": "17.6.1. J-չափելի բազմության պատկերը",
     "page": 265,
     "level": 3,
-    "matches": [
-      {
-        "score": 5.26,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 3",
-        "video_title": "Դաս 19 | Ֆուբինիի թեորեմը։ Ըստ Ժորդանի չափելի բազմություն | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Ըստ Ժորդանի չափելի բազմություններ",
-        "t": 2063,
-        "url": "https://youtu.be/aYDd28JTYc0?t=2063",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 4.95,
@@ -17677,16 +17292,16 @@
     "level": 3,
     "matches": [
       {
-        "score": 3.51,
+        "score": 10.0,
         "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 2",
-        "video_title": "Դաս 15 | Փոփոխականի փոխարինում և մասերով ինտեգրում | Մաթեմատիկական անալիզ 2 (ԿՎՏԳ)",
-        "topic": "Թեորեմ․ փոփոխականի փոխարինումը",
-        "t": 0,
-        "url": "https://youtu.be/5Ju2ajUhWTA?t=0",
-        "source": "manual: reviewed and confirmed"
+        "course": "Մաթեմատիկական անալիզ 3",
+        "video_title": "Դաս 20 | Ըստ Ժորդանի չափելի բազմությամբ ինտեգրալ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
+        "topic": "Փոփոխականի փոխարինում, յակոբիան",
+        "t": 2858,
+        "url": "https://youtu.be/RdCou2V8zmw?t=2858",
+        "source": "independent audit 2026-10-21: the multi-D change-of-variables chapter (jacobian) exists and the page is multi-D; was the 1-D theorem"
       }
     ],
     "alternates": []
@@ -18064,15 +17679,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 8.25,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 3",
         "video_title": "Դաս 22 | Կորագիծ ինտեգրալներ | Մաթեմատիկական անալիզ 3 (ԿՎՏԳ)",
-        "topic": "Օրինակ․ կորագիծ ինտեգրալի հաշվում",
-        "t": 2930,
-        "url": "https://youtu.be/rS8jqxkEfDc?t=2930"
+        "topic": "Կորի պարամետրացում",
+        "t": 0,
+        "url": "https://youtu.be/rS8jqxkEfDc?t=0",
+        "source": "sweep 2026-10-21 (after reader feedback on 2.1.2): was t=2930 (a computation example); the lecture opens on this section. Currently unshipped (chapter-card page) - fixed for data hygiene"
       }
     ],
     "alternates": [
@@ -18319,15 +17935,16 @@
     "level": 2,
     "matches": [
       {
-        "score": 9.54,
-        "confidence": "high",
+        "score": 10.0,
+        "confidence": "manual",
         "lecturer": "Կարեն Քեռյան",
         "track": "applied",
         "course": "Մաթեմատիկական անալիզ 4",
         "video_title": "Դաս 1 | Գրինի բանաձևը | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (Գրինի բանաձև)",
-        "t": 409,
-        "url": "https://youtu.be/--uF_V9h16s?t=409"
+        "topic": "Պարզ, փակ կորի շրջանցման ուղղություն",
+        "t": 0,
+        "url": "https://youtu.be/--uF_V9h16s?t=0",
+        "source": "independent audit 2026-10-21: the section's page also prints 18.2.1 (orientation of a closed curve), which is the lesson's t=0 block"
       }
     ],
     "alternates": [
@@ -18398,20 +18015,7 @@
     "title": "18.2.3. Գրինի բանաձևը բազմակապ տիրույթների համար",
     "page": 310,
     "level": 3,
-    "matches": [
-      {
-        "score": 3.89,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 1 | Գրինի բանաձևը | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Թեորեմ (Գրինի բանաձև)",
-        "t": 409,
-        "url": "https://youtu.be/--uF_V9h16s?t=409",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": [
       {
         "score": 3.13,
@@ -18594,20 +18198,7 @@
     "title": "18.3.3. Փակ դիֆերենցիալ ձև",
     "page": 315,
     "level": 3,
-    "matches": [
-      {
-        "score": 6.09,
-        "confidence": "manual",
-        "lecturer": "Կարեն Քեռյան",
-        "track": "applied",
-        "course": "Մաթեմատիկական անալիզ 4",
-        "video_title": "Դաս 2 | Կորագիծ ինտեգրալի անկախությունը ճանապարհից | Մաթեմատիկական անալիզ 4 (ԿՎՏԳ)",
-        "topic": "Լրիվ դիֆերենցիալ ձև և նախնական",
-        "t": 1926,
-        "url": "https://youtu.be/o7-iSSTfxU8?t=1926",
-        "source": "manual: reviewed and confirmed"
-      }
-    ],
+    "matches": [],
     "alternates": []
   },
   {

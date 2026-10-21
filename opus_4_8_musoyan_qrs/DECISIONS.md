@@ -3,6 +3,127 @@
 Newest at the top. See the script docstrings for mechanism-level detail; this file
 records choices someone would otherwise have to reverse-engineer.
 
+## 12. Full-set semantic pass by Codex with repo access: 8 retargets, 11 removals; the heading's containing section defines the object
+- **Date / status:** 2026-10-21, active; applies rules #9.1/#9.2, partially supersedes
+  the 11.3-family call in #10
+- **Why:** With its sandbox bypassed (broken Windows exec helper), Codex audited all
+  311 shipped links against the lectures' chapter lists - the first full semantic
+  pass by a reviewer other than this pipeline's author. Verdict 274 OK / 18 analogue
+  / 19 suspect; every suspect was re-verified here against matches.json,
+  analysis_index.json and, where decisive, the book's own page text. Outcome:
+  (a) 8 retimes/retargets - definition-bearing headings moved to their block starts
+  (4.8.1, 13.2.1, 17.2.2), wrong-object landings moved to the exact same-object
+  lesson that existed unused (8.1.4 to the multivariable tangent-plane lesson whose
+  TITLE equals the heading; 7.5.4 to Bolzano-Cauchy 1, the scalar continuous-image
+  theorem; the 11.3 family to Քեռյան's improper-integral by-parts/substitution
+  blocks in A4 L16, reopening #10's definite-integral call on strictly better
+  evidence - the honest same-object topics score 8.4 in the alternates);
+  (b) 11 removals of shipped links with no honest substitute (4.7.6, 5.8.4, 7.5.2,
+  12.3.4, 13.2.5, 14.7.2 both lecturers, 14.7.3-Մ, 17.6.1, 18.2.3, 18.3.3);
+  (c) 1 suspect REJECTED: 17.1.1's retime to the partition item - the book page
+  (v2 source p228) shows the subsection opens by defining the coordinate
+  parallelepiped, so the current t=2993 IS the block start.
+  The recurring new failure shape: the heading's CONTAINING SECTION defines the
+  mathematical object. 14.7 is the Fourier INTEGRAL section, so its 14.7.2/14.7.3
+  headings read identically to the Fourier-series topics every earlier audit matched
+  them to; ch. 11 is improper integrals, so 11.3 wanted the improper (not definite)
+  theorems. One Codex miss was caught in re-verification (14.7.3-Մ, same
+  series-on-integral shape as its flagged 14.7.2). Totals: 311 -> 297 configured
+  (156 + 141; 11 removals + 3 new same-page dedups), 295 placed (p125's two 14.1
+  lines still the only drops), 275 lines on 209 pages, audits clean, 108/108 live.
+- **Alternatives rejected:** Substituting the 2nd-order extremum rule for 4.7.6
+  (already linked from 4.7.5 on the same page); retiming 18.3.3 to the
+  equivalent-condition theorem at t=2112 (plausibly the closed<=>exact theorem, but
+  the chapter list never names closedness and 18.3.2 already links it); keeping
+  14.7.3-Մ as an analogue (series-vs-integral same-name links were removed in the
+  9.x precedent, unlike the kept cross-dimension family).
+- **What would change this:** The owner ruling the series-vs-integral family should
+  be kept as analogues after all (restores 14.7.2 both, 14.7.3-Մ), or new lectures
+  covering Fourier integrals / Stieltjes representation / multiply-connected Green.
+
+## 11. Chapter-page skip is by URL, not by page; footnote lines may stack above the cards
+- **Date / status:** 2026-10-21, active; refines the skip clause of #8
+- **Why:** A Codex cross-review caught that make_video_links.py skipped EVERY
+  section line on a chapter-card page, on the stated assumption that the card is
+  derived from exactly that heading's link. Measured: true for only 24 of 32 skips.
+  Of the 8 others, 4 were themselves wrong links fixed under rules #9.1/#9.2
+  (7.1-Ք and 12.1-Մ were best-title mid-block landings whose honest block start IS
+  the card's target; 8.1/8.1.1-Ք pointed at Դաս 12 = higher-order partials, i.e.
+  §8.2.1's lesson, when the honest Դաս 8 t=0 again equals the card) and 4 were
+  genuinely distinct targets a reader was losing (10.1-Մ on a page where
+  Մարտիրոսյան has no card; 14.1 both lecturers -> the Dirichlet-integral lessons;
+  17.1.1-Մ -> the subsection block +268s after the card). The skip now compares
+  urls: a line is skipped only when some card on the page already carries its
+  target. place_video_links.footnote_capacity was fixed so the line stack sits
+  ABOVE foot badges, computing capacity from the page's PRE-draw occupied rects -
+  a card's label is real inserted text a post-draw scan would count as content
+  (contrary to _slot_blocks' "drawn badges are invisible" claim, which holds only
+  for vector-only styles; the pre-draw scan was a second-round Codex suggestion
+  over intersection-based ink exclusion, which could hide real book text near an
+  explicit [x, y] badge). Totals: 311 placeable
+  (160 + 151), 309 placed: p125's two 14.1 lines drop loudly because the measured
+  text-to-card gap there is 20pt and one line needs 27pt.
+- **Alternatives rejected:** Keeping the page-level skip (loses 4 honest links);
+  forcing the 14.1 lines onto p125 by shrinking pads (27pt is already tight);
+  moving dropped lines to the next page (the link would sit on the wrong page).
+- **What would change this:** A redesign of chapter-page layout (e.g. smaller
+  cards) that frees the ~7pt p125 is short, or reader feedback that lines above
+  the cards look crowded.
+
+## 10. Independent-audit round: exact-lesson substitutions and 16 more removals; cross-dimension analogues kept pending owner ruling
+- **Date / status:** 2026-10-21, active; extends #9; the 11.3-family retarget
+  superseded by #12 (ch. 11 is improper integrals - the improper-integral theorems
+  existed in Քեռյան's A4 L16 and beat the definite-integral ones chosen here)
+- **Why:** An independent (unanchored) audit agent re-checked all 324 links against
+  rendered book pages and the lectures' chapter lists. Structural layers were clean;
+  semantically it found (a) 17 links where an EXACT same-object landing existed
+  unused - notably Քեռյան's own 1-D "Ինտեգրալի հատկությունները" (A2 L13) and the
+  definite-integral "Փոփոխականի փոխարինում և մասերով ինտեգրում" (A2 L15) lessons,
+  the 1-D Cantor theorem (A1 L18), and §2.1.2's true Property 1 at the END of L5
+  (the reader-reported link, now on its third and best landing) - all retargeted;
+  (b) 16 links whose content was a different theorem with no honest substitute
+  (Stone-Weierstrass -> classical Weierstrass, Fourier-specific termwise
+  integration/differentiation -> generic uniform-convergence theorems, Քեռյան on
+  Stieltjes headings, ch. 16 leftovers, 9.2/9.2.2 Մարտիրոսյան) - all removed.
+  Every retarget was asserted against analysis_index.json. Totals: 324 -> 307 links
+  (160 + 147), verified end to end (data chain, PDF rects/pairing, 107/107 live).
+  Count arithmetic (gap spotted by a Codex cross-review): 324 - 16 removals = 308;
+  the 17 retargets are count-neutral except that 8.3.1's new target equals 8.3's on
+  the same page, so the same-target dedup absorbed one more line (counter 24 -> 25),
+  308 - 1 = 307. (5.8/5.8.1 were already a dedup pair before and after - no change.)
+- **Deliberately NOT applied:** the audit's strictest reading of rule #9.2 would
+  also strip the systematic cross-dimension analogues (Մարտիրոսյան's multi-D
+  twins on vol-1 1-D integral headings 5.2.2-5.4.2, his ՊԿԱԻ versions of the
+  functional-series tests 10.2.1/10.2.2, the 1-D improper lemmas on §17.7's multi-D
+  headings, and similar). These exist because each lecturer covers the object in
+  only one course, were hand-curated deliberately, and removing them would strip
+  most dual-lecturer coverage in those stretches. Kept for now.
+- **What would change this:** The owner ruling that analogues should also go
+  (one more _reject batch), or new lectures covering the removed topics.
+
+## 9. A link targets its topic block's START; same-name topics for a different object get no link
+- **Date / status:** 2026-10-21, active
+- **Why:** A reader reported §2.1.2 opening at Property 4 instead of the section
+  start. A full semantic audit of all 355 shipped links against the lectures' own
+  chapter lists followed, and three rules came out of it:
+  1. A heading's timestamp is where its topic BLOCK starts in the lecture (walk
+     backward from the best title match), not the sub-item whose title matches best.
+     26 links retimed on this rule (audit + sweep entries in manual_matches.json).
+  2. A topic with the same NAME about a different mathematical object is a wrong
+     link: series vs improper-integral criteria (9.1.3, 9.3.2, 9.3.4, 9.6.3
+     Մարտիրոսյան), Fourier-Dini vs Abel-Dini (9.2.9), single-variable Fermat vs
+     constrained extrema (16.4.2). 7 links removed; where the honest same-object
+     topic exists it was substituted instead (9.3.2, 9.6.3 Քեռյան).
+  3. Two lines on one page pointing at the identical url are noise: make_video_links
+     dedups them, first in book order wins (24 removed, typically a section + its
+     first subsection opening on the same page).
+  Totals: 355 -> 324 links. Every retime was asserted against analysis_index.json.
+- **Alternatives rejected:** Keeping nearest-content same-name links (reader
+  feedback shows wrong landings get noticed); deduping by hiding the subsection
+  entry at generation (the section may be unmatched - dedup at the end is simpler).
+- **What would change this:** New lectures covering the removed topics (re-run
+  fetch + reconcile), or reader feedback that a deduped page should carry both labels.
+
 ## 8. Section/subsection links are thin footnote lines, capacity-aware, both lecturers
 - **Date / status:** 2026-10-20, active; supersedes #2 (owner asked for the full set)
 - **Why:** 336 placeable section/subsection matches land on 228 pages (max 4 per

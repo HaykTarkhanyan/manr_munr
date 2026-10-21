@@ -8,7 +8,9 @@ Mathematical Analysis textbook:
   in the [Համալսարանական մաթեմատիկա](https://www.youtube.com/channel/UCMFONp28jEDHXDBWJyRVYcA)
   lecture where that chapter's material starts (both lecturers where both teach it),
 - a thin clickable line at the foot of every page where a matched section or
-  subsection begins (336 lines on 228 pages, timestamped, both lecturers),
+  subsection begins (275 lines on 209 pages, timestamped, both lecturers;
+  same-target lines on one page are deduplicated, and on a chapter's opening
+  page a line appears only when it targets something the chapter card does not),
 - a reader-info page before chapter 1 (searchability, bookmarks, extra materials link).
 
 The deliverables are `out_pdf/musoyan_1_final.pdf` and `out_pdf/musoyan_2_final.pdf`.

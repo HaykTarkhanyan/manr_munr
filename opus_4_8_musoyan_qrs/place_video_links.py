@@ -289,14 +289,25 @@ def draw_chip(page: fitz.Page, x: float, y: float, label: str, url: str) -> None
     add_link(page, rect, url)
 
 
-def footnote_capacity(page: fitz.Page, taken: list = ()) -> tuple:
+def footnote_capacity(page: fitz.Page, taken: list = (), content: list = None) -> tuple:
     """(rule y of the bottom-most slot, how many lines fit) in the clear band under
     the page's content. Lines stack upward from the bottom margin; the band ends
-    where text, formulas or an already-placed badge begin."""
+    where text or formulas begin. A badge at the page foot (chapter cards) does not
+    kill the band - the stack sits above it; a badge anywhere else is content.
+
+    `content`: the page's occupied rects scanned BEFORE badges were drawn. A card's
+    LABEL is inserted text the scan sees (contrary to _slot_blocks' claim, which
+    holds only for vector-only styles), so a post-draw scan would count the card's
+    own label as page content and kill the band."""
     H = page.rect.height
-    blocks = _slot_blocks(page, taken)
-    band_top = max((b.y1 for b in blocks), default=H * 0.5)
     base_y = H - 18.0 - 13.0  # the rule sits 13pt of line above the bottom margin
+    content = list(occupied_rects(page) if content is None else content)
+    for r in (fitz.Rect(t) for t in taken):
+        if r.y1 > base_y:  # a drawn line occupies [y, y+15]: end the stack above r
+            base_y = min(base_y, r.y0 - BADGE_PAD - 15.0)
+        else:
+            content.append(r)
+    band_top = max((b.y1 for b in content), default=H * 0.5)
     cap = int((base_y - band_top - BADGE_PAD) // FOOT_LINE_H) + 1
     return base_y, max(cap, 0)
 
@@ -343,6 +354,8 @@ def draw_entries(doc: fitz.Document, entries: list, style: str) -> tuple:
         page = doc[page_no - 1]
         badges = [e for e in by_page[page_no] if e.get("style", style) != "footnote"]
         feet = [e for e in by_page[page_no] if e.get("style", style) == "footnote"]
+        # scan before any badge ink lands: capacity must see the book's content only
+        pre_blocks = occupied_rects(page) if feet else None
         for e in badges:
             this_style = e.get("style", style)
             w, h = badge_size(this_style, e["label"], e["url"])
@@ -352,7 +365,7 @@ def draw_entries(doc: fitz.Document, entries: list, style: str) -> tuple:
             placed.append(e)
         if not feet:
             continue
-        base_y, cap = footnote_capacity(page, taken[page_no])
+        base_y, cap = footnote_capacity(page, taken[page_no], pre_blocks)
         if len(feet) > cap:
             drop_ids = {id(e) for e in sorted(feet, key=lambda e: e.get("score", 0.0))
                         [:len(feet) - cap]}

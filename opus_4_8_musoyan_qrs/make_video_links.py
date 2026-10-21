@@ -7,8 +7,11 @@ build.py draws onto the final PDFs:
   - section/subsection rows -> 'footnote' line entries at the page foot, labeled
     "<heading> · <lecturer surname>", both lecturers where both match, carrying the
     match score so an overfull page can drop the weakest line.
-Section headings that open on a chapter-card page are skipped: the chapter link is
-derived from exactly that opening heading, so a line there duplicates the card.
+Section headings that open on a chapter-card page are skipped only when they target
+a url some card on that page already carries (usually they do: the chapter link is
+derived from that opening heading); a line with a genuinely different target stays.
+Two lines on one page pointing at the identical url are deduplicated (first in
+book order wins - typically a section and its first subsection).
 Chapters audited as having no honest video on the channel (15, 16, 19) have no
 placeable match and so get no entry.
 
@@ -71,8 +74,12 @@ def clean_url(m: dict) -> str:
 def main() -> None:
     rows = json.loads(MATCHES.read_text(encoding="utf-8"))
     config = {"_help": HELP, "1": [], "2": []}
-    chapter_pages = {(r["vol"], r["page"]) for r in rows if r["level"] == 1
-                     and any(m["confidence"] in PLACEABLE for m in r["matches"])}
+    card_urls = {}  # (vol, page) -> urls the chapter cards on that page carry
+    for r in rows:
+        if r["level"] == 1:
+            for m in r["matches"]:
+                if m["confidence"] in PLACEABLE:
+                    card_urls.setdefault((r["vol"], r["page"]), set()).add(clean_url(m))
     chapters_linked = lines = skipped = 0
     for row in rows:
         matches = [m for m in row["matches"] if m["confidence"] in PLACEABLE]
@@ -105,10 +112,12 @@ def main() -> None:
                     "position": position,
                 })
         else:
-            if (row["vol"], row["page"]) in chapter_pages:
-                skipped += len(matches)  # the chapter card already IS this link
-                continue
             for m in matches:
+                # Skip only an exact duplicate of a card on this page; a section
+                # line with its own target keeps its link even on a chapter page.
+                if clean_url(m) in card_urls.get((row["vol"], row["page"]), ()):
+                    skipped += 1
+                    continue
                 config[row["vol"]].append({
                     "page": row["page"],
                     "label": f"{row['title']} · {m['lecturer'].split()[-1]}",
@@ -118,14 +127,29 @@ def main() -> None:
                 })
                 lines += 1
 
+    deduped = 0
     for vol in ("1", "2"):
         config[vol].sort(key=lambda e: e["page"])  # stable: keeps book order per page
+        # A section and its first subsection often open on the same page and match
+        # the same video moment; two lines to one target is noise. Keep the first
+        # in book order (the broader heading).
+        seen, kept = set(), []
+        for e in config[vol]:
+            key = (e["page"], e["url"])
+            if e.get("style") == "footnote" and key in seen:
+                deduped += 1
+                lines -= 1
+                continue
+            seen.add(key)
+            kept.append(e)
+        config[vol] = kept
     OUT.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8")
     n1, n2 = len(config["1"]), len(config["2"])
     log.info(f"wrote {OUT.name}: {n1 + n2} links ({n1} vol 1, {n2} vol 2) - "
              f"{n1 + n2 - lines} chapter cards on {chapters_linked} chapters, "
-             f"{lines} section/subsection lines, {skipped} skipped on chapter pages")
+             f"{lines} section/subsection lines, {skipped} skipped on chapter pages, "
+             f"{deduped} same-target lines deduped")
 
 
 if __name__ == "__main__":
